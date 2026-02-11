@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tết Slide - Mẫu PowerPoint Đẹp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-top">
+            <img src="images/logo.png" alt="Tết Slide Logo" class="logo">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Tìm kiếm mẫu PowerPoint...">
+                <button onclick="searchFunction()"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="user-actions">
+                <button onclick="toggleAuthModal()"><i class="fas fa-user"></i> Đăng nhập</button>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <a href="#"><i class="fas fa-home"></i> Trang chủ</a>
+            <a href="#"><i class="fas fa-file-powerpoint"></i> Mẫu Slide</a>
+            <a href="#"><i class="fas fa-concierge-bell"></i> Dịch vụ khác</a>
+            <a href="https://m.me/yourpage" target="_blank"><i class="fab fa-facebook-messenger"></i> CSKH</a>
+            <a href="#"><i class="fas fa-user-circle"></i> Tài khoản</a>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <img src="images/tet-banner.jpg" alt="Chúc Mừng Năm Mới">
+    </section>
+
+    <main>
+        <div class="filter-section">
+            <div class="filter-group">
+                <label>Danh mục:</label>
+                <select id="categoryFilter">
+                    <option value="all">Tất cả</option>
+                    <option value="presentation">Bài thuyết trình</option>
+                    <option value="poster">Poster</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Chủ đề:</label>
+                <select id="topicFilter">
+                    <option value="all">Tất cả</option>
+                    <option value="tet">Tết</option>
+                    <option value="food">Ẩm thực</option>
+                    <option value="history">Lịch sử</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Sắp xếp:</label>
+                <select id="sortFilter">
+                    <option value="newest">Mới nhất</option>
+                    <option value="best-seller">Bán chạy</option>
+                    <option value="price-high">Giá cao</option>
+                    <option value="price-low">Giá thấp</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            </div>
+    </main>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Giỏ hàng của bạn</h2>
+            <div id="cartItems"></div>
+            <hr>
+            <div class="checkout-area">
+                <p>Tổng tiền: <span id="totalPrice">0đ</span></p>
+                <button class="btn-checkout" onclick="alert('Chuyển hướng đến trang thanh toán...')">Thanh toán ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleAuthModal()">&times;</span>
+            <h2>Đăng nhập / Đăng ký</h2>
+            <input type="text" placeholder="Email hoặc Số điện thoại">
+            <input type="password" placeholder="Mật khẩu">
+            <button class="btn-red">Tiếp tục</button>
+            <p>Hoặc đăng nhập với</p>
+            <button class="btn-google"><i class="fab fa-google"></i> Google</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Hướng dẫn</h3>
+                <ul>
+                    <li><a href="#">Mua bài thuyết trình</a></li>
+                    <li><a href="#">Hướng dẫn chỉnh sửa</a></li>
+                    <li><a href="#">Hướng dẫn tải xuống</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#">Điều khoản</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Thanh toán</a></li>
+                    <li><a href="#">Dịch vụ thiết kế</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p>&copy; 2024 Tết Slide. All rights reserved.</p>
+                <p>Credit: AI Collaboration</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
