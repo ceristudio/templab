@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>SlideRed - Template PowerPoint chuyên nghiệp</title>
+    <!-- Google Font & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ===== RESET & GLOBAL ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: #1E1E1E;
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== MÀU NHẤN ĐỎ ===== */
+        :root {
+            --red: #E63946;        /* Đỏ tươi hiện đại */
+            --red-light: #FF6B6B;
+            --white: #FFFFFF;
+            --gray-100: #F8F9FA;
+            --gray-200: #E9ECEF;
+            --gray-600: #6C757D;
+            --gray-900: #212529;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 35px rgba(230, 57, 70, 0.1);
+            --radius: 20px;
+            --radius-sm: 12px;
+        }
+
+        /* ===== BUTTONS & BADGES ===== */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: white;
+            box-shadow: 0 8px 16px rgba(230, 57, 70, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #c92a3a;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 22px rgba(230, 57, 70, 0.35);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--red);
+            color: var(--red);
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: var(--red);
+            color: white;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 30px;
+            background: var(--red);
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-sale {
+            background: #FFB800;
+            color: #1E1E1E;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            padding: 20px 0;
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.02);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--red);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--gray-900);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 36px;
+            font-weight: 500;
+        }
+
+        .nav-menu a {
+            color: var(--gray-600);
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--red);
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-icons i {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .header-icons i:hover {
+            color: var(--red);
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -10px;
+            background: var(--red);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: 600;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Search box */
+        .search-box {
+            display: none;
+            margin-top: 16px;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .search-box.active {
+            display: block;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px;
+            border: 1px solid var(--gray-200);
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--red);
+            box-shadow: 0 0 0 3px rgba(230,57,70,0.1);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+            padding: 60px 0 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--gray-900);
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: var(--red);
+            border-bottom: 4px solid var(--red-light);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .hero-sub {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+
+        .social-proof i {
+            color: var(--red);
+        }
+
+        .hero-image {
+            background: var(--gray-100);
+            border-radius: var(--radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+
+        .hero-image:hover {
+            transform: scale(1.02);
+        }
+
+        .hero-image img {
+            border-radius: 12px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* ===== CATEGORIES ===== */
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--gray-900);
+        }
+
+        .section-title span {
+            color: var(--red);
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .category-item {
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .category-icon {
+            background: var(--gray-100);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            transition: 0.25s;
+            border: 2px solid transparent;
+        }
+
+        .category-icon i {
+            font-size: 2.5rem;
+            color: var(--red);
+        }
+
+        .category-item:hover .category-icon {
+            background: var(--red);
+            border-color: var(--red);
+        }
+
+        .category-item:hover .category-icon i {
+            color: white;
+        }
+
+        .category-item p {
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        /* ===== PRODUCT TABS & GRID ===== */
+        .tab-bar {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--gray-200);
+            padding-bottom: 12px;
+        }
+
+        .tab {
+            font-weight: 600;
+            color: var(--gray-600);
+            cursor: pointer;
+            padding: 6px 0;
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        .tab.active {
+            color: var(--red);
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--red);
+            border-radius: 3px 3px 0 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid var(--gray-200);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .product-thumb {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            background: var(--gray-100);
+        }
+
+        .product-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-thumb img {
+            transform: scale(1.05);
+        }
+
+        .product-badges {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .quick-view {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            background: rgba(230,57,70,0.9);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: 600;
+            transition: bottom 0.3s;
+            cursor: pointer;
+            backdrop-filter: blur(4px);
+        }
+
+        .product-card:hover .quick-view {
+            bottom: 0;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            font-size: 0.8rem;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .product-title {
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+            color: var(--gray-900);
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .current-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--red);
+        }
+
+        .old-price {
+            font-size: 1rem;
+            color: var(--gray-600);
+            text-decoration: line-through;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #FFB800;
+            font-size: 0.9rem;
+        }
+
+        .rating span {
+            color: var(--gray-600);
+            margin-left: 5px;
+        }
+
+        /* ===== BANNER COUNTDOWN ===== */
+        .banner-sale {
+            background: linear-gradient(145deg, #E63946, #FF6B6B);
+            border-radius: var(--radius);
+            padding: 50px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+            color: white;
+        }
+
+        .banner-content h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .banner-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+            background: rgba(255,255,255,0.15);
+            padding: 20px 30px;
+            border-radius: 60px;
+            backdrop-filter: blur(5px);
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+
+        /* ===== HOW IT WORKS ===== */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-icon {
+            background: var(--gray-100);
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            border: 2px dashed var(--red);
+            color: var(--red);
+            font-size: 2.2rem;
+            transition: 0.2s;
+        }
+
+        .step:hover .step-icon {
+            background: var(--red);
+            color: white;
+            border-color: white;
+        }
+
+        .step h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .step p {
+            color: var(--gray-600);
+        }
+
+        /* ===== TESTIMONIALS (SLIDER) ===== */
+        .slider-container {
+            position: relative;
+            margin-bottom: 60px;
+            overflow: hidden;
+        }
+
+        .testimonial-wrapper {
+            display: flex;
+            transition: transform 0.4s ease;
+        }
+
+        .testimonial-card {
+            flex: 0 0 calc(33.333% - 20px);
+            margin-right: 30px;
+            background: var(--gray-100);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .testimonial-card:last-child {
+            margin-right: 0;
+        }
+
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-avatar i {
+            font-size: 2rem;
+            color: var(--gray-600);
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .testimonial-job {
+            color: var(--red);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            color: var(--gray-600);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .stars {
+            color: #FFB800;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .slider-btn {
+            background: white;
+            border: 1px solid var(--gray-200);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--gray-600);
+        }
+
+        .slider-btn:hover {
+            background: var(--red);
+            color: white;
+            border-color: var(--red);
+        }
+
+        /* ===== CTA NEWSLETTER ===== */
+        .cta-newsletter {
+            background: var(--gray-100);
+            border-radius: var(--radius);
+            padding: 60px 50px;
+            text-align: center;
+            margin-bottom: 60px;
+            border: 1px solid var(--gray-200);
+        }
+
+        .cta-newsletter h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 15px;
+        }
+
+        .cta-newsletter p {
+            color: var(--gray-600);
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 16px 24px;
+            border: 1px solid var(--gray-200);
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+            transition: 0.2s;
+        }
+
+        .newsletter-form input:focus {
+            border-color: var(--red);
+            box-shadow: 0 0 0 3px rgba(230,57,70,0.1);
+        }
+
+        .newsletter-form button {
+            background: var(--red);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0 40px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: #c92a3a;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: white;
+            padding-top: 60px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--gray-900);
+        }
+
+        .footer-col p {
+            color: var(--gray-600);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: var(--gray-600);
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--red);
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8rem;
+            color: var(--gray-600);
+            margin-top: 20px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--gray-600);
+            border-top: 1px solid var(--gray-200);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .categories-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu, .header-icons .fa-search, .header-icons .fa-user {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .social-proof {
+                justify-content: center;
+            }
+            .categories-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            .banner-sale {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .testimonial-card {
+                flex: 0 0 calc(100% - 20px);
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            .countdown {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">Slide<span>Red</span></div>
+                <nav class="nav-menu">
+                    <a href="#">Sản phẩm</a>
+                    <a href="#">Bộ sưu tập</a>
+                    <a href="#">Giá</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Hỗ trợ</a>
+                </nav>
+                <div class="header-icons">
+                    <i class="fas fa-search" id="search-icon"></i>
+                    <i class="fas fa-user"></i>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">3</span>
+                    </div>
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Search box hidden by default -->
+            <div class="search-box" id="search-box">
+                <input type="text" class="search-input" placeholder="Tìm template PowerPoint...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- HERO SECTION -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>
+                        Template PowerPoint <span>chuyên nghiệp</span><br>Chỉ vài click
+                    </h1>
+                    <p class="hero-sub">Dễ dàng chỉnh sửa, dùng ngay. Dành cho doanh nghiệp, giáo dục, startup.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary">Khám phá ngay</a>
+                        <a href="#" class="btn btn-outline">Tải miễn phí</a>
+                    </div>
+                    <div class="social-proof">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Tin dùng bởi 15.000+ nhà thiết kế & marketer</span>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <!-- Placeholder cho laptop mockup -->
+                    <img src="https://placehold.co/600x400/f8f9fa/E63946?text=PowerPoint+Mockup" alt="Template showcase">
+                </div>
+            </section>
+
+            <!-- DANH MỤC NỔI BẬT -->
+            <section>
+                <h2 class="section-title">Danh mục <span>phổ biến</span></h2>
+                <div class="categories-grid">
+                    <div class="category-item">
+                        <div class="category-icon"><i class="fas fa-briefcase"></i></div>
+                        <p>Kinh doanh</p>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon"><i class="fas fa-chart-line"></i></div>
+                        <p>Marketing</p>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <p>Giáo dục</p>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon"><i class="fas fa-rocket"></i></div>
+                        <p>Khởi nghiệp</p>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <p>Báo cáo</p>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon"><i class="fas fa-user-tie"></i></div>
+                        <p>Portfolio</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BỘ LỌC & SẢN PHẨM -->
+            <section>
+                <div class="tab-bar">
+                    <div class="tab active" data-tab="popular">Phổ biến nhất</div>
+                    <div class="tab" data-tab="newest">Mới nhất</div>
+                    <div class="tab" data-tab="price">Giá tốt</div>
+                </div>
+                <div class="product-grid" id="product-grid">
+                    <!-- 6 sản phẩm mẫu - sẽ được giữ nguyên hoặc có thể thay đổi bằng JS -->
+                    <!-- Card 1 -->
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <img src="https://placehold.co/400x250/f8f9fa/E63946?text=Business+Pro" alt="Template">
+                            <div class="product-badges">
+                                <span class="badge">Bán chạy</span>
+                                <span class="badge badge-sale">-20%</span>
+                            </div>
+                            <div class="quick-view">Xem nhanh</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Kinh doanh</div>
+                            <h3 class="product-title">Thuyết trình doanh nghiệp xanh</h3>
+                            <div class="product-price">
+                                <span class="current-price">299.000đ</span>
+                                <span class="old-price">499.000đ</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(128)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <img src="https://placehold.co/400x250/f8f9fa/E63946?text=Marketing+Kit" alt="Template">
+                            <div class="product-badges">
+                                <span class="badge">New</span>
+                            </div>
+                            <div class="quick-view">Xem nhanh</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Marketing</div>
+                            <h3 class="product-title">Bộ công cụ Marketing 2025</h3>
+                            <div class="product-price">
+                                <span class="current-price">399.000đ</span>
+                                <span class="old-price">599.000đ</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(76)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <img src="https://placehold.co/400x250/f8f9fa/E63946?text=Startup+Pitch" alt="Template">
+                            <div class="product-badges">
+                                <span class="badge">Bán chạy</span>
+                            </div>
+                            <div class="quick-view">Xem nhanh</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Khởi nghiệp</div>
+                            <h3 class="product-title">Pitch Deck cho Startup</h3>
+                            <div class="product-price">
+                                <span class="current-price">349.000đ</span>
+                                <span class="old-price">450.000đ</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(214)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <img src="https://placehold.co/400x250/f8f9fa/E63946?text=Education" alt="Template">
+                            <div class="product-badges">
+                                <span class="badge badge-sale">-15%</span>
+                            </div>
+                            <div class="quick-view">Xem nhanh</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Giáo dục</div>
+                            <h3 class="product-title">Bài giảng đại học hiện đại</h3>
+                            <div class="product-price">
+                                <span class="current-price">199.000đ</span>
+                                <span class="old-price">249.000đ</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(92)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <img src="https://placehold.co/400x250/f8f9fa/E63946?text=Financial+Report" alt="Template">
+                            <div class="product-badges">
+                                <span class="badge">New</span>
+                            </div>
+                            <div class="quick-view">Xem nhanh</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Tài chính</div>
+                            <h3 class="product-title">Báo cáo tài chính Q1</h3>
+                            <div class="product-price">
+                                <span class="current-price">329.000đ</span>
+                                <span class="old-price">429.000đ</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>(47)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <img src="https://placehold.co/400x250/f8f9fa/E63946?text=Portfolio" alt="Template">
+                            <div class="product-badges">
+                                <span class="badge">Bán chạy</span>
+                            </div>
+                            <div class="quick-view">Xem nhanh</div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">Cá nhân</div>
+                            <h3 class="product-title">Portfolio sáng tạo</h3>
+                            <div class="product-price">
+                                <span class="current-price">279.000đ</span>
+                                <span class="old-price">350.000đ</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span>(155)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BANNER ƯU ĐÃI + COUNTDOWN -->
+            <section class="banner-sale">
+                <div class="banner-content">
+                    <h3>Combo 50 template</h3>
+                    <p>Giá chỉ bằng 1 ly cà phê</p>
+                    <a href="#" class="btn btn-primary" style="background: white; color: var(--red);">Mua ngay</a>
+                </div>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span id="days">02</span>
+                        <span class="countdown-label">Ngày</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">10</span>
+                        <span class="countdown-label">Giờ</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">45</span>
+                        <span class="countdown-label">Phút</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">30</span>
+                        <span class="countdown-label">Giây</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HƯỚNG DẪN 3 BƯỚC -->
+            <section>
+                <h2 class="section-title">Chỉ <span>3 bước</span> để sở hữu</h2>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-mouse-pointer"></i></div>
+                        <h4>Chọn template</h4>
+                        <p>Hơn 2000+ mẫu đẹp, phân loại theo ngành nghề.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-credit-card"></i></div>
+                        <h4>Thanh toán & tải về</h4>
+                        <p>Thanh toán an toàn, file gửi ngay sau 1 phút.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon"><i class="fas fa-pen-fancy"></i></div>
+                        <h4>Chỉnh sửa trong 5 phút</h4>
+                        <p>Dễ dàng kéo thả, thay màu, thêm logo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- REVIEW KHÁCH HÀNG (SLIDER) -->
+            <section>
+                <h2 class="section-title">Khách hàng <span>nói gì</span></h2>
+                <div class="slider-container">
+                    <div class="testimonial-wrapper" id="testimonialWrapper">
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar"><i class="fas fa-user-circle"></i></div>
+                            <div class="testimonial-name">Nguyễn Thị Lan</div>
+                            <div class="testimonial-job">Marketing Manager</div>
+                            <div class="testimonial-text">"Tiết kiệm hàng giờ thiết kế, slide đẹp miễn chê. Từ khi dùng SlideRed, tôi không còn phải thức khuya làm slide nữa!"</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar"><i class="fas fa-user-circle"></i></div>
+                            <div class="testimonial-name">Trần Văn Hoàng</div>
+                            <div class="testimonial-job">Giảng viên đại học</div>
+                            <div class="testimonial-text">"Tôi mua gói combo 50 template, chất lượng cực tốt, sinh viên rất thích. Ủng hộ đội ngũ!"</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-avatar"><i class="fas fa-user-circle"></i></div>
+                            <div class="testimonial-name">Lê Minh Tú</div>
+                            <div class="testimonial-job">Founder</div>
+                            <div class="testimonial-text">"Pitch deck của startup mình gây ấn tượng mạnh với nhà đầu tư nhờ template ở đây. Giá rất hợp lý."</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <div class="slider-btn" id="prevSlide"><i class="fas fa-chevron-left"></i></div>
+                    <div class="slider-btn" id="nextSlide"><i class="fas fa-chevron-right"></i></div>
+                </div>
+            </section>
+
+            <!-- CTA NEWSLETTER -->
+            <section class="cta-newsletter">
+                <h2>Bạn đã sẵn sàng nâng tầm bài thuyết trình?</h2>
+                <p>Nhận ngay 3 template miễn phí khi đăng ký</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Địa chỉ email của bạn">
+                    <button type="submit">Nhận ưu đãi</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">Slide<span>Red</span></div>
+                    <p>SlideRed cung cấp hàng ngàn template PowerPoint chất lượng cao, dễ chỉnh sửa, phù hợp cho mọi nhu cầu thuyết trình.</p>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Giới thiệu</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Đối tác</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Chính sách</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách hoàn tiền</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Hướng dẫn tải file</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Khiếu nại</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 SlideRed. Thiết kế và phát triển bởi đội ngũ SlideRed.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            "use strict";
+
+            // 1. SEARCH TOGGLE
+            const searchIcon = document.getElementById('search-icon');
+            const searchBox = document.getElementById('search-box');
+            if (searchIcon && searchBox) {
+                searchIcon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    searchBox.classList.toggle('active');
+                });
+            }
+
+            // 2. COUNTDOWN TIMER
+            function startCountdown(days, hours, minutes, seconds) {
+                let countdownDate = new Date();
+                countdownDate.setDate(countdownDate.getDate() + days);
+                countdownDate.setHours(countdownDate.getHours() + hours);
+                countdownDate.setMinutes(countdownDate.getMinutes() + minutes);
+                countdownDate.setSeconds(countdownDate.getSeconds() + seconds);
+
+                function updateTimer() {
+                    const now = new Date().getTime();
+                    const distance = countdownDate - now;
+
+                    if (distance < 0) {
+                        document.getElementById('days').innerText = '00';
+                        document.getElementById('hours').innerText = '00';
+                        document.getElementById('minutes').innerText = '00';
+                        document.getElementById('seconds').innerText = '00';
+                        return;
+                    }
+
+                    const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    document.getElementById('days').innerText = d < 10 ? '0' + d : d;
+                    document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+                    document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+                    document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+                }
+
+                updateTimer();
+                setInterval(updateTimer, 1000);
+            }
+            startCountdown(2, 10, 45, 30); // 2 ngày, 10 giờ, 45 phút, 30 giây
+
+            // 3. SLIDER (TESTIMONIALS)
+            const wrapper = document.getElementById('testimonialWrapper');
+            const prevBtn = document.getElementById('prevSlide');
+            const nextBtn = document.getElementById('nextSlide');
+            if (wrapper && prevBtn && nextBtn) {
+                let currentIndex = 0;
+                const cards = document.querySelectorAll('.testimonial-card');
+                const cardCount = cards.length;
+                let cardWidth = cards[0]?.offsetWidth || 320;
+                let gap = 30; // margin-right
+
+                function getCardWidthWithGap() {
+                    if (cards[0]) {
+                        return cards[0].offsetWidth + gap;
+                    }
+                    return 350;
+                }
+
+                function updateSlider() {
+                    const width = getCardWidthWithGap();
+                    wrapper.style.transform = `translateX(-${currentIndex * width}px)`;
+                }
+
+                nextBtn.addEventListener('click', function() {
+                    if (currentIndex < cardCount - 1) {
+                        currentIndex++;
+                    } else {
+                        currentIndex = 0; // loop
+                    }
+                    updateSlider();
+                });
+
+                prevBtn.addEventListener('click', function() {
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                    } else {
+                        currentIndex = cardCount - 1;
+                    }
+                    updateSlider();
+                });
+
+                window.addEventListener('resize', function() {
+                    // reset position khi resize để tránh lệch
+                    currentIndex = 0;
+                    updateSlider();
+                });
+            }
+
+            // 4. MOBILE MENU (demo: chỉ log, có thể mở rộng)
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', function() {
+                    alert('Menu mobile sẽ mở ra ở đây (demo). Bạn có thể thêm code xử lý sidebar).');
+                });
+            }
+
+            // 5. TAB (demo chuyển active)
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    // Ở đây có thể gọi AJAX thay đổi sản phẩm, demo giữ nguyên grid
+                });
+            });
+
+            // 6. CART BADGE (demo: click tăng số lượng)
+            const cartBadge = document.getElementById('cart-badge');
+            if (cartBadge) {
+                let cartCount = 3;
+                // Giả lập thêm sản phẩm bằng cách click vào quick view
+                document.querySelectorAll('.quick-view').forEach(el => {
+                    el.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        cartCount++;
+                        cartBadge.textContent = cartCount;
+                    });
+                });
+            }
+
+        })();
+    </script>
+
+    <!-- 
+        Lưu ý: 
+        - Tất cả hình ảnh đều dùng placeholder từ placehold.co (màu xám - đỏ)
+        - Màu đỏ chủ đạo: #E63946
+        - Màu trắng nền: #FFFFFF
+        - Hoàn toàn responsive, không dùng framework
+    -->
+</body>
+</html>
