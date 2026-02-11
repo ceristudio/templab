@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>Chính sách bảo mật | SlidePro - Template PowerPoint chuyên nghiệp</title>
+    <meta name="description" content="Chính sách bảo mật của SlidePro: cam kết bảo vệ dữ liệu cá nhân, thu thập thông tin, cookie, quyền chủ thể dữ liệu theo Nghị định 13/2023/NĐ-CP.">
+    <!-- Google Font & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ===== RESET & GLOBAL (giống trang chủ) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: #1E1E1E;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== MÀU NHẤN ĐỎ ===== */
+        :root {
+            --red: #E63946;
+            --red-light: #FF6B6B;
+            --white: #FFFFFF;
+            --gray-100: #F8F9FA;
+            --gray-200: #E9ECEF;
+            --gray-600: #6C757D;
+            --gray-900: #212529;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 35px rgba(230, 57, 70, 0.15);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: white;
+            box-shadow: 0 8px 16px rgba(230, 57, 70, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #c92a3a;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 25px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--red);
+            color: var(--red);
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: var(--red);
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        /* ===== BADGE (giữ lại nếu cần) ===== */
+        .badge-liquid {
+            display: inline-block;
+            padding: 6px 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 50px;
+            background: rgba(230, 57, 70, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: var(--red);
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== HEADER (giống hệt trang chủ) ===== */
+        header {
+            padding: 20px 0;
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.02);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--red);
+            letter-spacing: -0.5px;
+            transition: var(--transition);
+        }
+
+        .logo span {
+            color: var(--gray-900);
+        }
+
+        .logo:hover {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 36px;
+            font-weight: 500;
+        }
+
+        .nav-menu a {
+            color: var(--gray-600);
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--red);
+            transition: width 0.25s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--red);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .header-icons i {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .header-icons i:hover {
+            color: var(--red);
+            transform: scale(1.1);
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -10px;
+            right: -12px;
+            background: var(--red);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: 600;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== SEARCH BOX ===== */
+        .search-box {
+            display: none;
+            margin-top: 16px;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .search-box.active {
+            display: block;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 24px;
+            border: 1px solid var(--gray-200);
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.2s, box-shadow 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--red);
+            box-shadow: 0 0 0 4px rgba(230,57,70,0.1);
+        }
+
+        /* ===== PAGE CONTENT – CHÍNH SÁCH BẢO MẬT ===== */
+        .privacy-section {
+            padding: 60px 0;
+        }
+
+        .privacy-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .privacy-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 10px;
+        }
+
+        .privacy-header h1 span {
+            color: var(--red);
+            border-bottom: 4px solid var(--red-light);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .privacy-header .last-update {
+            color: var(--gray-600);
+            font-size: 1rem;
+            display: inline-block;
+            background: var(--gray-100);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+
+        .privacy-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 50px;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .privacy-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .privacy-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--red-light);
+        }
+
+        .privacy-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .privacy-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .privacy-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .privacy-content p {
+            color: var(--gray-600);
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .privacy-content strong {
+            color: var(--red);
+            font-weight: 700;
+        }
+
+        .privacy-content ul {
+            margin: 15px 0 20px 30px;
+            list-style: disc;
+        }
+
+        .privacy-content li {
+            color: var(--gray-600);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .privacy-content hr {
+            margin: 40px 0;
+            border: none;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .privacy-highlight {
+            background: rgba(230, 57, 70, 0.05);
+            padding: 25px 30px;
+            border-left: 6px solid var(--red);
+            border-radius: var(--radius-sm);
+            margin: 30px 0;
+        }
+
+        .privacy-highlight p {
+            margin-bottom: 0;
+        }
+
+        .privacy-badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .privacy-badge {
+            background: var(--gray-100);
+            color: var(--gray-900);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid var(--gray-200);
+        }
+
+        .privacy-badge i {
+            color: var(--red);
+            margin-right: 6px;
+        }
+
+        /* ===== FOOTER (giống trang chủ) ===== */
+        footer {
+            background: white;
+            padding-top: 60px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--gray-900);
+        }
+
+        .footer-col p {
+            color: var(--gray-600);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: var(--gray-600);
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .footer-links a:hover {
+            color: var(--red);
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--red);
+            transition: width 0.2s;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8rem;
+            color: var(--gray-600);
+            margin-top: 20px;
+        }
+
+        .payment-icons i {
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .payment-icons i:hover {
+            color: var(--red);
+            transform: scale(1.2);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--gray-600);
+            border-top: 1px solid var(--gray-200);
+            font-size: 0.9rem;
+        }
+
+        /* ===== MOBILE SIDEBAR (giống trang chủ) ===== */
+        .mobile-sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 320px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px 0 0 24px;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+            padding: 30px 20px;
+            z-index: 1000;
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .mobile-sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--red);
+        }
+
+        .sidebar-logo span {
+            color: var(--gray-900);
+        }
+
+        .sidebar-close {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(230, 57, 70, 0.15);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--red);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .sidebar-close:hover {
+            background: var(--red);
+            color: white;
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            flex: 1;
+        }
+
+        .sidebar-nav a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.2s;
+            border-bottom: 1px solid rgba(230,57,70,0.1);
+        }
+
+        .sidebar-nav a:hover {
+            color: var(--red);
+            padding-left: 8px;
+        }
+
+        .sidebar-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--red);
+            transition: width 0.25s;
+        }
+
+        .sidebar-nav a:hover::after {
+            width: 100%;
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(230,57,70,0.2);
+        }
+
+        .sidebar-icons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--gray-600);
+        }
+
+        .sidebar-icons i {
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .sidebar-icons i:hover {
+            color: var(--red);
+            transform: scale(1.2);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .privacy-card {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu, .header-icons .fa-search, .header-icons .fa-user {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .privacy-card {
+                padding: 30px;
+            }
+            .privacy-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .privacy-card {
+                padding: 25px;
+            }
+            .privacy-header h1 {
+                font-size: 1.8rem;
+            }
+            .privacy-content h2 {
+                font-size: 1.5rem;
+            }
+            .privacy-content h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">Slide<span>Pro</span></div>
+                <nav class="nav-menu">
+                    <a href="index.html">Sản phẩm</a>
+                    <a href="#">Bộ sưu tập</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Hỗ trợ</a>
+                </nav>
+                <div class="header-icons">
+                    <i class="fas fa-search" id="search-icon"></i>
+                    <i class="fas fa-user"></i>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">3</span>
+                    </div>
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="search-box" id="search-box">
+                <input type="text" class="search-input" placeholder="Tìm template PowerPoint...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="privacy-section">
+                <div class="privacy-header">
+                    <h1>Chính sách <span>Bảo mật</span></h1>
+                    <div class="last-update">
+                        <i class="fas fa-calendar-alt" style="margin-right: 8px;"></i> Cập nhật lần cuối: 01/03/2025
+                    </div>
+                </div>
+
+                <div class="privacy-card">
+                    <div class="privacy-content">
+                        <!-- Nội dung chính sách bảo mật – tuân thủ Nghị định 13/2023/NĐ-CP, đồng bộ thương hiệu SlidePro -->
+                        <h2>1. Mục đích và phạm vi áp dụng</h2>
+                        <p>Chúng tôi, <strong>Công ty TNHH SlidePro</strong> (sau đây gọi là <strong>"SlidePro"</strong>), vận hành website <strong>SlidePro.com</strong>. Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng, lưu trữ, bảo vệ và xử lý thông tin cá nhân của bạn khi bạn truy cập, đăng ký tài khoản, mua sắm hoặc sử dụng bất kỳ dịch vụ nào trên website.</p>
+                        <p>Chúng tôi cam kết bảo vệ dữ liệu cá nhân của bạn theo đúng quy định của pháp luật Việt Nam, bao gồm nhưng không giới hạn <strong>Nghị định 13/2023/NĐ-CP về Bảo vệ dữ liệu cá nhân</strong>, Luật An toàn thông tin mạng và các văn bản hướng dẫn liên quan.</p>
+
+                        <h2>2. Thông tin cá nhân chúng tôi thu thập</h2>
+                        <p>Chúng tôi có thể thu thập các loại thông tin cá nhân sau:</p>
+                        
+                        <h3>2.1. Thông tin bạn cung cấp trực tiếp</h3>
+                        <ul>
+                            <li>Họ và tên, địa chỉ email, số điện thoại, địa chỉ nhận hàng (nếu có).</li>
+                            <li>Tên đăng nhập, mật khẩu, thông tin thanh toán (thẻ tín dụng, tài khoản ngân hàng, ví điện tử – được xử lý qua cổng thanh toán đối tác).</li>
+                            <li>Nội dung bạn đăng tải, bình luận, đánh giá sản phẩm.</li>
+                            <li>Mọi thông tin khác bạn tự nguyện cung cấp thông qua biểu mẫu hoặc liên hệ.</li>
+                        </ul>
+
+                        <h3>2.2. Thông tin thu thập tự động</h3>
+                        <ul>
+                            <li>Địa chỉ IP, loại trình duyệt, hệ điều hành, thiết bị truy cập.</li>
+                            <li>Hành vi duyệt web (thời gian, số lần click, trang tham quan).</li>
+                            <li>Cookie và các công nghệ theo dõi tương tự (xem mục 7).</li>
+                        </ul>
+
+                        <h3>2.3. Thông tin từ bên thứ ba</h3>
+                        <ul>
+                            <li>Nếu bạn đăng nhập qua tài khoản mạng xã hội (Google, Facebook), chúng tôi nhận được các thông tin công khai từ tài khoản đó theo phạm vi bạn cho phép.</li>
+                            <li>Thông tin từ các đối tác thanh toán để xác nhận giao dịch.</li>
+                        </ul>
+
+                        <h2>3. Mục đích xử lý dữ liệu cá nhân</h2>
+                        <div class="privacy-badge-list">
+                            <span class="privacy-badge"><i class="fas fa-check-circle"></i> Cung cấp dịch vụ</span>
+                            <span class="privacy-badge"><i class="fas fa-chart-line"></i> Cải thiện trải nghiệm</span>
+                            <span class="privacy-badge"><i class="fas fa-mail-bulk"></i> Tiếp thị</span>
+                            <span class="privacy-badge"><i class="fas fa-gavel"></i> Tuân thủ pháp luật</span>
+                            <span class="privacy-badge"><i class="fas fa-flask"></i> Phát triển sản phẩm</span>
+                        </div>
+                        <ul>
+                            <li><strong>Cung cấp và vận hành dịch vụ:</strong> Tạo tài khoản, xử lý đơn hàng, gửi file tải xuống, hỗ trợ khách hàng.</li>
+                            <li><strong>Cải thiện trải nghiệm người dùng:</strong> Phân tích hành vi, tối ưu giao diện, đề xuất sản phẩm phù hợp.</li>
+                            <li><strong>Tiếp thị và quảng cáo:</strong> Gửi email thông báo chương trình khuyến mãi, sản phẩm mới (bạn có thể từ chối bất cứ lúc nào).</li>
+                            <li><strong>Tuân thủ pháp luật:</strong> Lưu trữ hóa đơn, chứng từ, giải quyết tranh chấp, ngăn chặn gian lận.</li>
+                            <li><strong>Phát triển sản phẩm:</strong> Thống kê, nghiên cứu thị trường.</li>
+                        </ul>
+
+                        <h2>4. Cơ sở pháp lý xử lý dữ liệu</h2>
+                        <p>Chúng tôi chỉ xử lý dữ liệu cá nhân của bạn khi có một trong các căn cứ sau:</p>
+                        <ul>
+                            <li>Bạn đã cho <strong>sự đồng ý</strong>;</li>
+                            <li>Việc xử lý cần thiết để <strong>thực hiện hợp đồng</strong> (mua bán sản phẩm) với bạn;</li>
+                            <li>Để <strong>tuân thủ nghĩa vụ pháp lý</strong>;</li>
+                            <li>Bảo vệ <strong>lợi ích sống còn</strong> của bạn hoặc người khác;</li>
+                            <li>Thực hiện <strong>nhiệm vụ công cộng</strong>;</li>
+                            <li>Phục vụ <strong>lợi ích hợp pháp</strong> của chúng tôi, không xâm phạm quyền lợi cơ bản của bạn.</li>
+                        </ul>
+
+                        <h2>5. Thời gian lưu trữ dữ liệu</h2>
+                        <p>Chúng tôi lưu trữ dữ liệu cá nhân của bạn trong suốt thời gian bạn duy trì tài khoản hoặc trong phạm vi cần thiết để thực hiện các mục đích nêu trên. Sau đó, dữ liệu sẽ được ẩn danh hóa (anonymized) hoặc xóa an toàn, trừ trường hợp pháp luật yêu cầu lưu trữ lâu hơn (ví dụ: hóa đơn, chứng từ theo Luật Kế toán).</p>
+
+                        <h2>6. Chia sẻ và tiết lộ thông tin</h2>
+                        <p>Chúng tôi <strong>không bán, cho thuê hay trao đổi</strong> dữ liệu cá nhân của bạn với bên thứ ba vì mục đích thương mại của riêng họ. Tuy nhiên, chúng tôi có thể chia sẻ thông tin trong các trường hợp sau:</p>
+                        <ul>
+                            <li><strong>Đối tác cung cấp dịch vụ:</strong> Bên vận chuyển, cổng thanh toán, nền tảng email marketing, dịch vụ phân tích dữ liệu (Google Analytics)... Các đối tác này chỉ được phép xử lý dữ liệu theo chỉ dẫn của chúng tôi và phải tuân thủ các cam kết bảo mật.</li>
+                            <li><strong>Theo yêu cầu của pháp luật:</strong> Khi có yêu cầu từ cơ quan nhà nước có thẩm quyền, hoặc để bảo vệ quyền lợi hợp pháp của chúng tôi.</li>
+                            <li><strong>Giao dịch sáp nhập/mua lại:</strong> Trong trường hợp công ty có thay đổi chủ sở hữu, thông tin người dùng có thể được chuyển giao như một tài sản, nhưng sẽ có thông báo trước cho bạn.</li>
+                        </ul>
+
+                        <h2>7. Cookie và công nghệ theo dõi</h2>
+                        <div class="privacy-highlight">
+                            <p>Website sử dụng cookie để ghi nhớ phiên đăng nhập, giỏ hàng; phân tích lưu lượng truy cập (Google Analytics, Facebook Pixel); cá nhân hóa nội dung quảng cáo.</p>
+                        </div>
+                        <p>Bạn có thể từ chối cookie bằng cách cài đặt trình duyệt, nhưng khi đó một số tính năng của website có thể bị ảnh hưởng. Việc bạn tiếp tục sử dụng website mà không thay đổi cài đặt cookie đồng nghĩa với việc bạn chấp nhận việc sử dụng cookie của chúng tôi.</p>
+
+                        <h2>8. Bảo mật dữ liệu</h2>
+                        <p>Chúng tôi áp dụng các biện pháp bảo mật kỹ thuật và tổ chức phù hợp, bao gồm:</p>
+                        <ul>
+                            <li>Mã hóa SSL (HTTPS) cho toàn bộ website.</li>
+                            <li>Lưu trữ mật khẩu dưới dạng băm (hash) không thể đảo ngược.</li>
+                            <li>Hạn chế quyền truy cập nội bộ chỉ những nhân sự cần thiết.</li>
+                            <li>Thường xuyên kiểm tra, đánh giá hệ thống.</li>
+                        </ul>
+                        <p>Dù vậy, không có phương thức truyền tải hay lưu trữ nào an toàn tuyệt đối. Chúng tôi luôn nỗ lực để bảo vệ thông tin của bạn, nhưng không thể cam kết hoàn toàn trước mọi rủi ro nằm ngoài tầm kiểm soát.</p>
+
+                        <h2>9. Quyền của chủ thể dữ liệu</h2>
+                        <p>Theo Nghị định 13/2023/NĐ-CP, bạn có các quyền sau:</p>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 20px 0;">
+                            <span class="privacy-badge"><i class="fas fa-info-circle"></i> Quyền được biết</span>
+                            <span class="privacy-badge"><i class="fas fa-check-double"></i> Quyền đồng ý/không đồng ý</span>
+                            <span class="privacy-badge"><i class="fas fa-eye"></i> Quyền truy cập</span>
+                            <span class="privacy-badge"><i class="fas fa-undo-alt"></i> Quyền rút lại đồng ý</span>
+                            <span class="privacy-badge"><i class="fas fa-trash-alt"></i> Quyền xóa dữ liệu</span>
+                            <span class="privacy-badge"><i class="fas fa-pause-circle"></i> Quyền hạn chế xử lý</span>
+                            <span class="privacy-badge"><i class="fas fa-share-alt"></i> Quyền cung cấp dữ liệu</span>
+                            <span class="privacy-badge"><i class="fas fa-ban"></i> Quyền phản đối xử lý</span>
+                            <span class="privacy-badge"><i class="fas fa-bullhorn"></i> Quyền khiếu nại, tố cáo</span>
+                            <span class="privacy-badge"><i class="fas fa-money-bill-alt"></i> Quyền yêu cầu bồi thường</span>
+                            <span class="privacy-badge"><i class="fas fa-shield-alt"></i> Quyền tự bảo vệ</span>
+                        </div>
+                        <p>Để thực hiện các quyền này, vui lòng liên hệ với chúng tôi theo thông tin tại mục <strong>12</strong>. Chúng tôi sẽ phản hồi trong thời hạn <strong>72 giờ</strong> kể từ khi nhận được yêu cầu hợp lệ.</p>
+
+                        <h2>10. Trẻ em</h2>
+                        <p>Website của chúng tôi không nhắm đến đối tượng dưới 16 tuổi. Chúng tôi không cố ý thu thập thông tin cá nhân của trẻ em. Nếu phát hiện đã thu thập nhầm, chúng tôi sẽ xóa dữ liệu ngay lập tức. Nếu bạn là phụ huynh/người giám hộ và biết con em mình đã cung cấp thông tin, vui lòng thông báo cho chúng tôi.</p>
+
+                        <h2>11. Thay đổi chính sách bảo mật</h2>
+                        <p>Chúng tôi có thể cập nhật chính sách này định kỳ để phản ánh thay đổi về pháp luật hoặc hoạt động của chúng tôi. Phiên bản mới sẽ được đăng tải tại đây kèm ngày sửa đổi. Việc bạn tiếp tục sử dụng website sau khi có thay đổi đồng nghĩa với việc bạn chấp nhận chính sách mới.</p>
+
+                        <h2>12. Thông tin liên hệ</h2>
+                        <p>Nếu có bất kỳ câu hỏi, khiếu nại hoặc yêu cầu liên quan đến chính sách bảo mật và dữ liệu cá nhân, bạn có thể liên hệ:</p>
+                        <p>
+                            <strong>Bộ phận Bảo vệ dữ liệu cá nhân</strong><br>
+                            📧 Email: privacy@slidepro.com<br>
+                            📞 Điện thoại: 028 9999 8888 (ext. 123)<br>
+                            📍 Địa chỉ: Tầng 10, Tòa nhà ABC, 123 Nguyễn Văn B, Quận 1, TP. Hồ Chí Minh<br>
+                            ⏱️ Thời gian xử lý: Trong vòng 72 giờ làm việc.
+                        </p>
+                        <hr>
+                        <p style="font-style: italic; color: var(--gray-600);">* Chính sách này có hiệu lực kể từ ngày được công bố và thay thế mọi phiên bản trước đó. Bản quyền nội dung © 2025 SlidePro.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER (giống trang chủ) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">Slide<span>Pro</span></div>
+                    <p>SlidePro cung cấp hàng ngàn template PowerPoint chất lượng cao, dễ chỉnh sửa, phù hợp cho mọi nhu cầu thuyết trình.</p>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Giới thiệu</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Đối tác</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Chính sách</h4>
+                    <ul class="footer-links">
+                        <li><a href="dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a></li>
+                        <li><a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách hoàn tiền</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Hướng dẫn tải file</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Khiếu nại</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 SlidePro. Thiết kế và phát triển bởi đội ngũ SlidePro.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE SIDEBAR - LIQUID GLASS (giống trang chủ) -->
+    <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Slide<span>Pro</span></div>
+            <div class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="sidebar-nav">
+            <a href="index.html">Sản phẩm</a>
+            <a href="#">Bộ sưu tập</a>
+            <a href="#">Blog</a>
+            <a href="#">Hỗ trợ</a>
+            <a href="#">Liên hệ</a>
+        </div>
+        <div class="sidebar-footer">
+            <div class="sidebar-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user"></i>
+                <div class="cart-icon" style="position: relative;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" style="top: -8px; right: -10px;">3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            "use strict";
+
+            // ----- 1. SEARCH TOGGLE -----
+            const searchIcon = document.getElementById('search-icon');
+            const searchBox = document.getElementById('search-box');
+            if (searchIcon && searchBox) {
+                searchIcon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    searchBox.classList.toggle('active');
+                });
+            }
+
+            // ----- 2. MOBILE SIDEBAR TOGGLE -----
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const sidebar = document.getElementById('mobileSidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const closeBtn = document.getElementById('sidebarClose');
+
+            function openSidebar() {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', openSidebar);
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeSidebar);
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', closeSidebar);
+            }
+
+            // ----- 3. CART BADGE DEMO (giữ cho đồng bộ) -----
+            const cartBadge = document.getElementById('cart-badge');
+            if (cartBadge) {
+                let cartCount = 3;
+                // Giữ nguyên số lượng demo
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>Điều khoản dịch vụ | SlidePro - Template PowerPoint chuyên nghiệp</title>
+    <meta name="description" content="Điều khoản dịch vụ của SlidePro: quy định về bản quyền, giấy phép sử dụng template PowerPoint, thanh toán, hoàn tiền và trách nhiệm pháp lý.">
+    <!-- Google Font & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ===== RESET & GLOBAL (giống trang chủ) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: #1E1E1E;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== MÀU NHẤN ĐỎ ===== */
+        :root {
+            --red: #E63946;
+            --red-light: #FF6B6B;
+            --white: #FFFFFF;
+            --gray-100: #F8F9FA;
+            --gray-200: #E9ECEF;
+            --gray-600: #6C757D;
+            --gray-900: #212529;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 35px rgba(230, 57, 70, 0.15);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: white;
+            box-shadow: 0 8px 16px rgba(230, 57, 70, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #c92a3a;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 25px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--red);
+            color: var(--red);
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: var(--red);
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        /* ===== BADGE (giữ lại nếu cần) ===== */
+        .badge-liquid {
+            display: inline-block;
+            padding: 6px 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 50px;
+            background: rgba(230, 57, 70, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: var(--red);
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== HEADER (giống hệt trang chủ) ===== */
+        header {
+            padding: 20px 0;
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.02);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--red);
+            letter-spacing: -0.5px;
+            transition: var(--transition);
+        }
+
+        .logo span {
+            color: var(--gray-900);
+        }
+
+        .logo:hover {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 36px;
+            font-weight: 500;
+        }
+
+        .nav-menu a {
+            color: var(--gray-600);
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--red);
+            transition: width 0.25s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--red);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .header-icons i {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .header-icons i:hover {
+            color: var(--red);
+            transform: scale(1.1);
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -10px;
+            right: -12px;
+            background: var(--red);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: 600;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== SEARCH BOX ===== */
+        .search-box {
+            display: none;
+            margin-top: 16px;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .search-box.active {
+            display: block;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 24px;
+            border: 1px solid var(--gray-200);
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.2s, box-shadow 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--red);
+            box-shadow: 0 0 0 4px rgba(230,57,70,0.1);
+        }
+
+        /* ===== PAGE CONTENT – ĐIỀU KHOẢN DỊCH VỤ ===== */
+        .terms-section {
+            padding: 60px 0;
+        }
+
+        .terms-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .terms-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 10px;
+        }
+
+        .terms-header h1 span {
+            color: var(--red);
+            border-bottom: 4px solid var(--red-light);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .terms-header .last-update {
+            color: var(--gray-600);
+            font-size: 1rem;
+            display: inline-block;
+            background: var(--gray-100);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+
+        .terms-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 50px;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .terms-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .terms-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--red-light);
+        }
+
+        .terms-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .terms-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .terms-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .terms-content p {
+            color: var(--gray-600);
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .terms-content strong {
+            color: var(--red);
+            font-weight: 700;
+        }
+
+        .terms-content ul {
+            margin: 15px 0 20px 30px;
+            list-style: disc;
+        }
+
+        .terms-content li {
+            color: var(--gray-600);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .terms-content hr {
+            margin: 40px 0;
+            border: none;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .terms-highlight {
+            background: rgba(230, 57, 70, 0.05);
+            padding: 25px 30px;
+            border-left: 6px solid var(--red);
+            border-radius: var(--radius-sm);
+            margin: 30px 0;
+        }
+
+        .terms-highlight p {
+            margin-bottom: 0;
+        }
+
+        /* ===== FOOTER (giống trang chủ) ===== */
+        footer {
+            background: white;
+            padding-top: 60px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--gray-900);
+        }
+
+        .footer-col p {
+            color: var(--gray-600);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: var(--gray-600);
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .footer-links a:hover {
+            color: var(--red);
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--red);
+            transition: width 0.2s;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8rem;
+            color: var(--gray-600);
+            margin-top: 20px;
+        }
+
+        .payment-icons i {
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .payment-icons i:hover {
+            color: var(--red);
+            transform: scale(1.2);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--gray-600);
+            border-top: 1px solid var(--gray-200);
+            font-size: 0.9rem;
+        }
+
+        /* ===== MOBILE SIDEBAR (giống trang chủ) ===== */
+        .mobile-sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 320px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px 0 0 24px;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+            padding: 30px 20px;
+            z-index: 1000;
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .mobile-sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--red);
+        }
+
+        .sidebar-logo span {
+            color: var(--gray-900);
+        }
+
+        .sidebar-close {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(230, 57, 70, 0.15);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--red);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .sidebar-close:hover {
+            background: var(--red);
+            color: white;
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            flex: 1;
+        }
+
+        .sidebar-nav a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.2s;
+            border-bottom: 1px solid rgba(230,57,70,0.1);
+        }
+
+        .sidebar-nav a:hover {
+            color: var(--red);
+            padding-left: 8px;
+        }
+
+        .sidebar-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--red);
+            transition: width 0.25s;
+        }
+
+        .sidebar-nav a:hover::after {
+            width: 100%;
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(230,57,70,0.2);
+        }
+
+        .sidebar-icons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--gray-600);
+        }
+
+        .sidebar-icons i {
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .sidebar-icons i:hover {
+            color: var(--red);
+            transform: scale(1.2);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .terms-card {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu, .header-icons .fa-search, .header-icons .fa-user {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .terms-card {
+                padding: 30px;
+            }
+            .terms-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .terms-card {
+                padding: 25px;
+            }
+            .terms-header h1 {
+                font-size: 1.8rem;
+            }
+            .terms-content h2 {
+                font-size: 1.5rem;
+            }
+            .terms-content h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">Slide<span>Pro</span></div>
+                <nav class="nav-menu">
+                    <a href="index.html">Sản phẩm</a>
+                    <a href="#">Bộ sưu tập</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Hỗ trợ</a>
+                </nav>
+                <div class="header-icons">
+                    <i class="fas fa-search" id="search-icon"></i>
+                    <i class="fas fa-user"></i>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">3</span>
+                    </div>
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="search-box" id="search-box">
+                <input type="text" class="search-input" placeholder="Tìm template PowerPoint...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="terms-section">
+                <div class="terms-header">
+                    <h1>Điều khoản <span>Dịch vụ</span></h1>
+                    <div class="last-update">
+                        <i class="fas fa-calendar-alt" style="margin-right: 8px;"></i> Cập nhật lần cuối: 01/03/2025
+                    </div>
+                </div>
+
+                <div class="terms-card">
+                    <div class="terms-content">
+                        <!-- Nội dung điều khoản dịch vụ (soạn thảo chuẩn pháp lý, đồng bộ thương hiệu SlidePro) -->
+                        <h2>1. Giới thiệu chung</h2>
+                        <p>Chào mừng bạn đến với <strong>SlidePro</strong>. Bằng việc truy cập, duyệt nội dung hoặc thực hiện giao dịch mua bán trên website này, bạn xác nhận rằng bạn đã đọc, hiểu và đồng ý bị ràng buộc bởi tất cả các điều khoản dưới đây.</p>
+                        <p>Nếu bạn không đồng ý với bất kỳ điều khoản nào, vui lòng không sử dụng website hoặc mua sản phẩm của chúng tôi.</p>
+
+                        <h2>2. Đối tượng và điều kiện sử dụng</h2>
+                        <ul>
+                            <li>Bạn phải đủ 18 tuổi hoặc hoạt động dưới sự giám sát của cha mẹ/người giám hộ hợp pháp.</li>
+                            <li>Bạn có đầy đủ năng lực hành vi dân sự để thực hiện các giao dịch.</li>
+                            <li>Tài khoản của bạn không được phép chia sẻ cho bên thứ ba nếu không có sự đồng ý bằng văn bản của chúng tôi.</li>
+                        </ul>
+
+                        <h2>3. Quyền sở hữu trí tuệ</h2>
+                        <p>Tất cả các mẫu PowerPoint, hình ảnh, biểu tượng, font chữ, hiệu ứng, tệp âm thanh, video và các tài nguyên đồ họa khác (sau đây gọi chung là <strong>"Sản phẩm"</strong>) đăng tải trên <strong>SlidePro</strong> đều thuộc bản quyền của <strong>Công ty TNHH SlidePro</strong> hoặc các đối tác cấp phép của chúng tôi.</p>
+                        <p>Mọi hành vi sao chép, phân phối lại, bán lại, chuyển nhượng hoặc sử dụng sai mục đích đều vi phạm pháp luật về sở hữu trí tuệ và có thể bị xử lý theo quy định của Bộ luật Dân sự 2015, Luật Sở hữu trí tuệ 2005 (sửa đổi 2022) và các công ước quốc tế mà Việt Nam là thành viên.</p>
+
+                        <h2>4. Giấy phép sử dụng (License)</h2>
+                        <p>Khi bạn thanh toán thành công cho một Sản phẩm, chúng tôi cấp cho bạn một giấy phép <strong>không độc quyền, không thể chuyển nhượng, không thể bán lại</strong>, có hiệu lực trên toàn cầu, sử dụng trọn đời cho Sản phẩm đó, với các điều kiện sau:</p>
+                        
+                        <h3>4.1. Giấy phép tiêu chuẩn (Standard License)</h3>
+                        <ul>
+                            <li>Sử dụng cho <strong>1 người dùng</strong> duy nhất.</li>
+                            <li>Được phép chỉnh sửa, tùy biến nội dung phù hợp với mục đích thương mại/thuyết trình cá nhân.</li>
+                            <li><strong>Không được</strong> đăng tải lại dưới dạng mẫu (template) có thể tải xuống, cho/tặng/bán lại file gốc.</li>
+                            <li><strong>Không được</strong> sử dụng trong các sản phẩm kỹ thuật số bán lại (như theme website, ebook template, v.v.) mà không có giấy phép mở rộng.</li>
+                        </ul>
+
+                        <h3>4.2. Giấy phép mở rộng (Extended License)</h3>
+                        <ul>
+                            <li>Bao gồm tất cả quyền của giấy phép tiêu chuẩn.</li>
+                            <li>Được phép sử dụng Sản phẩm như một phần của sản phẩm thương mại để bán lại (ví dụ: bộ bài giảng, khóa học online có slide gốc).</li>
+                            <li>Số lượng người dùng không giới hạn trong cùng một tổ chức/công ty.</li>
+                        </ul>
+
+                        <h3>4.3. Giấy phép doanh nghiệp (Enterprise License)</h3>
+                        <ul>
+                            <li>Dành cho tập đoàn, trường học sử dụng trên 50 máy tính hoặc nhân sự. <em>Vui lòng liên hệ riêng qua email enterprise@slidepro.com.</em></li>
+                        </ul>
+
+                        <h2>5. Các hành vi bị nghiêm cấm</h2>
+                        <ul>
+                            <li>Dùng công cụ tự động (bot, scraper) để thu thập sản phẩm.</li>
+                            <li>Đăng nhập vào tài khoản người khác trái phép.</li>
+                            <li>Can thiệp vào hệ thống bảo mật, thanh toán của website.</li>
+                            <li>Sử dụng sản phẩm vào mục đích bôi nhọ, kích động bạo lực, vi phạm thuần phong mỹ tục.</li>
+                            <li>Tuyên bố sai về quyền tác giả đối với Sản phẩm.</li>
+                        </ul>
+
+                        <h2>6. Phương thức thanh toán & giao dịch</h2>
+                        <ul>
+                            <li>Chúng tôi hỗ trợ thanh toán qua thẻ tín dụng, chuyển khoản ngân hàng, ví điện tử MoMo, VNPay.</li>
+                            <li>Giá niêm yết trên website <strong>đã bao gồm VAT</strong> (nếu có).</li>
+                            <li>Sau khi thanh toán thành công, bạn sẽ nhận được email chứa đường dẫn tải xuống (download link) từ Google Drive.</li>
+                            <li>Thời gian lưu trữ file tải lên đến <strong>7 ngày</strong>; quá hạn bạn cần liên hệ hỗ trợ để được cấp lại (có thể phát sinh phí).</li>
+                        </ul>
+
+                        <h2>7. Chính sách hoàn tiền & đổi trả</h2>
+                        <div class="terms-highlight">
+                            <p>Do bản chất sản phẩm số có thể sao chép ngay sau khi tải, chúng tôi <strong>không hỗ trợ hoàn tiền</strong> dưới bất kỳ hình thức nào sau khi bạn đã tải thành công file, trừ trường hợp:</p>
+                        </div>
+                        <ul>
+                            <li>File bị hỏng, không mở được do lỗi từ chúng tôi.</li>
+                            <li>Bạn tải nhầm sản phẩm trong vòng 30 phút đầu và chưa sử dụng file.</li>
+                            <li>Có sai sót về mô tả sản phẩm nghiêm trọng so với thực tế.</li>
+                        </ul>
+                        <p>Mọi yêu cầu hoàn tiền phải được gửi qua email trong vòng 7 ngày kể từ ngày mua.</p>
+
+                        <h2>8. Giới hạn trách nhiệm pháp lý</h2>
+                        <ul>
+                            <li>Chúng tôi cam kết sản phẩm không chứa mã độc, virus. Tuy nhiên, bạn có trách nhiệm tự kiểm tra và chịu trách nhiệm bảo mật thiết bị của mình.</li>
+                            <li>Chúng tôi không chịu trách nhiệm về bất kỳ thiệt hại gián tiếp nào (mất dữ liệu, mất cơ hội kinh doanh) phát sinh từ việc sử dụng hoặc không thể sử dụng sản phẩm.</li>
+                            <li>Tổng trách nhiệm pháp lý của chúng tôi trong mọi trường hợp không vượt quá số tiền bạn đã thanh toán cho sản phẩm đó.</li>
+                        </ul>
+
+                        <h2>9. Chấm dứt & khóa tài khoản</h2>
+                        <p>Chúng tôi có quyền đình chỉ hoặc chấm dứt tài khoản của bạn ngay lập tức mà không cần báo trước nếu phát hiện vi phạm bất kỳ điều khoản nào. Khi đó, mọi giấy phép sử dụng sản phẩm sẽ tự động chấm dứt và bạn phải xóa toàn bộ bản sao sản phẩm khỏi hệ thống của mình.</p>
+
+                        <h2>10. Điều khoản về nội dung do người dùng tải lên</h2>
+                        <p><em>(Áp dụng khi SlidePro mở tính năng marketplace)</em></p>
+                        <ul>
+                            <li>Người đăng cam kết sở hữu bản quyền hoặc có giấy phép đầy đủ.</li>
+                            <li>Bạn đồng ý cấp cho chúng tôi quyền phân phối, hiển thị, giới thiệu sản phẩm trên nền tảng.</li>
+                            <li>Chúng tôi có quyền gỡ bỏ bất kỳ nội dung nào vi phạm bản quyền hoặc thuần phong mỹ tục.</li>
+                        </ul>
+
+                        <h2>11. Sửa đổi điều khoản</h2>
+                        <p>Chúng tôi có quyền cập nhật Điều khoản Dịch vụ bất cứ lúc nào. Phiên bản cập nhật sẽ được đăng tại đây kèm ngày sửa đổi. Việc bạn tiếp tục sử dụng website sau khi thay đổi đồng nghĩa với việc bạn chấp nhận các điều khoản mới.</p>
+
+                        <h2>12. Luật áp dụng & giải quyết tranh chấp</h2>
+                        <ul>
+                            <li>Các điều khoản này được điều chỉnh và giải thích theo <strong>pháp luật Việt Nam</strong>.</li>
+                            <li>Mọi tranh chấp phát sinh, nếu không thể giải quyết qua thương lượng, sẽ được đưa ra <strong>Tòa án Nhân dân cấp tỉnh/thành phố Hồ Chí Minh</strong> nơi chúng tôi đặt trụ sở chính.</li>
+                        </ul>
+
+                        <h2>13. Thông tin liên hệ</h2>
+                        <p>Mọi thắc mắc về điều khoản dịch vụ, vui lòng liên hệ:</p>
+                        <p>
+                            <strong>Email:</strong> support@slidepro.com<br>
+                            <strong>Điện thoại:</strong> 028 9999 8888<br>
+                            <strong>Địa chỉ:</strong> Tầng 10, Tòa nhà ABC, 123 Nguyễn Văn B, Quận 1, TP. Hồ Chí Minh
+                        </p>
+                        <hr>
+                        <p style="font-style: italic; color: var(--gray-600);">* Bản quyền nội dung © 2025 SlidePro. Mọi hành vi sao chép, trích dẫn không được phép khi chưa có văn bản đồng ý.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER (giống trang chủ) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">Slide<span>Pro</span></div>
+                    <p>SlidePro cung cấp hàng ngàn template PowerPoint chất lượng cao, dễ chỉnh sửa, phù hợp cho mọi nhu cầu thuyết trình.</p>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Giới thiệu</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Đối tác</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Chính sách</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách hoàn tiền</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Hướng dẫn tải file</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Khiếu nại</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 SlidePro. Thiết kế và phát triển bởi đội ngũ SlidePro.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE SIDEBAR - LIQUID GLASS (giống trang chủ) -->
+    <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Slide<span>Pro</span></div>
+            <div class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="sidebar-nav">
+            <a href="index.html">Sản phẩm</a>
+            <a href="#">Bộ sưu tập</a>
+            <a href="#">Blog</a>
+            <a href="#">Hỗ trợ</a>
+            <a href="#">Liên hệ</a>
+        </div>
+        <div class="sidebar-footer">
+            <div class="sidebar-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user"></i>
+                <div class="cart-icon" style="position: relative;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" style="top: -8px; right: -10px;">3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            "use strict";
+
+            // ----- 1. SEARCH TOGGLE (giữ nguyên) -----
+            const searchIcon = document.getElementById('search-icon');
+            const searchBox = document.getElementById('search-box');
+            if (searchIcon && searchBox) {
+                searchIcon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    searchBox.classList.toggle('active');
+                });
+            }
+
+            // ----- 2. MOBILE SIDEBAR TOGGLE -----
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const sidebar = document.getElementById('mobileSidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const closeBtn = document.getElementById('sidebarClose');
+
+            function openSidebar() {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', openSidebar);
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeSidebar);
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', closeSidebar);
+            }
+
+            // ----- 3. CART BADGE DEMO (giữ cho vui) -----
+            const cartBadge = document.getElementById('cart-badge');
+            if (cartBadge) {
+                let cartCount = 3;
+                // Giả lập nếu có nút thêm giỏ hàng (không có trên trang này, nhưng giữ để tránh lỗi)
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>Chính sách hoàn tiền | SlidePro - Template PowerPoint chuyên nghiệp</title>
+    <meta name="description" content="Chính sách hoàn tiền & đổi trả của SlidePro dành cho template PowerPoint. Quy định rõ ràng, minh bạch, bảo vệ quyền lợi khách hàng.">
+    <!-- Google Font & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ===== RESET & GLOBAL (giống trang chủ) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #FFFFFF;
+            color: #1E1E1E;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== MÀU NHẤN ĐỎ ===== */
+        :root {
+            --red: #E63946;
+            --red-light: #FF6B6B;
+            --white: #FFFFFF;
+            --gray-100: #F8F9FA;
+            --gray-200: #E9ECEF;
+            --gray-600: #6C757D;
+            --gray-900: #212529;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 20px 35px rgba(230, 57, 70, 0.15);
+            --radius: 20px;
+            --radius-sm: 12px;
+            --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .btn-primary {
+            background: var(--red);
+            color: white;
+            box-shadow: 0 8px 16px rgba(230, 57, 70, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: #c92a3a;
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 16px 25px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--red);
+            color: var(--red);
+            background: white;
+        }
+
+        .btn-outline:hover {
+            background: var(--red);
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        /* ===== BADGE (giữ lại nếu cần) ===== */
+        .badge-liquid {
+            display: inline-block;
+            padding: 6px 16px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 50px;
+            background: rgba(230, 57, 70, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: var(--red);
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== HEADER (giống hệt trang chủ) ===== */
+        header {
+            padding: 20px 0;
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.02);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.9rem;
+            font-weight: 800;
+            color: var(--red);
+            letter-spacing: -0.5px;
+            transition: var(--transition);
+        }
+
+        .logo span {
+            color: var(--gray-900);
+        }
+
+        .logo:hover {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 36px;
+            font-weight: 500;
+        }
+
+        .nav-menu a {
+            color: var(--gray-600);
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--red);
+            transition: width 0.25s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--red);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .header-icons i {
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .header-icons i:hover {
+            color: var(--red);
+            transform: scale(1.1);
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -10px;
+            right: -12px;
+            background: var(--red);
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 50%;
+            font-weight: 600;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== SEARCH BOX ===== */
+        .search-box {
+            display: none;
+            margin-top: 16px;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        .search-box.active {
+            display: block;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 24px;
+            border: 1px solid var(--gray-200);
+            border-radius: 50px;
+            font-size: 1rem;
+            outline: none;
+            transition: border 0.2s, box-shadow 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--red);
+            box-shadow: 0 0 0 4px rgba(230,57,70,0.1);
+        }
+
+        /* ===== PAGE CONTENT – CHÍNH SÁCH HOÀN TIỀN ===== */
+        .refund-section {
+            padding: 60px 0;
+        }
+
+        .refund-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .refund-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 10px;
+        }
+
+        .refund-header h1 span {
+            color: var(--red);
+            border-bottom: 4px solid var(--red-light);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .refund-header .last-update {
+            color: var(--gray-600);
+            font-size: 1rem;
+            display: inline-block;
+            background: var(--gray-100);
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+
+        .refund-card {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 50px;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+        }
+
+        .refund-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+
+        .refund-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--red-light);
+        }
+
+        .refund-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .refund-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .refund-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .refund-content p {
+            color: var(--gray-600);
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .refund-content strong {
+            color: var(--red);
+            font-weight: 700;
+        }
+
+        .refund-content ul {
+            margin: 15px 0 20px 30px;
+            list-style: disc;
+        }
+
+        .refund-content li {
+            color: var(--gray-600);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        .refund-content hr {
+            margin: 40px 0;
+            border: none;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .refund-highlight {
+            background: rgba(230, 57, 70, 0.05);
+            padding: 25px 30px;
+            border-left: 6px solid var(--red);
+            border-radius: var(--radius-sm);
+            margin: 30px 0;
+        }
+
+        .refund-highlight p {
+            margin-bottom: 0;
+        }
+
+        .refund-note {
+            background: #FFF3CD;
+            border-left: 6px solid #FFB800;
+            padding: 20px 25px;
+            border-radius: var(--radius-sm);
+            margin: 30px 0;
+            color: #856404;
+        }
+
+        .refund-note strong {
+            color: #856404;
+        }
+
+        .refund-badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .refund-badge {
+            background: var(--gray-100);
+            color: var(--gray-900);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid var(--gray-200);
+        }
+
+        .refund-badge i {
+            color: var(--red);
+            margin-right: 6px;
+        }
+
+        .step-list {
+            counter-reset: step-counter;
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .step-list li {
+            counter-increment: step-counter;
+            margin-bottom: 25px;
+            padding-left: 50px;
+            position: relative;
+            font-size: 1.05rem;
+            color: var(--gray-600);
+        }
+
+        .step-list li:before {
+            content: counter(step-counter);
+            background: var(--red);
+            color: white;
+            font-weight: 700;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: -2px;
+            font-size: 1rem;
+        }
+
+        /* ===== FOOTER (giống trang chủ) ===== */
+        footer {
+            background: white;
+            padding-top: 60px;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--gray-900);
+        }
+
+        .footer-col p {
+            color: var(--gray-600);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 14px;
+        }
+
+        .footer-links a {
+            color: var(--gray-600);
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .footer-links a:hover {
+            color: var(--red);
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--red);
+            transition: width 0.2s;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        .payment-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 1.8rem;
+            color: var(--gray-600);
+            margin-top: 20px;
+        }
+
+        .payment-icons i {
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .payment-icons i:hover {
+            color: var(--red);
+            transform: scale(1.2);
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--gray-600);
+            border-top: 1px solid var(--gray-200);
+            font-size: 0.9rem;
+        }
+
+        /* ===== MOBILE SIDEBAR (giống trang chủ) ===== */
+        .mobile-sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 320px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px 0 0 24px;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+            padding: 30px 20px;
+            z-index: 1000;
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile-sidebar.active {
+            right: 0;
+        }
+
+        .mobile-sidebar-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .sidebar-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--red);
+        }
+
+        .sidebar-logo span {
+            color: var(--gray-900);
+        }
+
+        .sidebar-close {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(230, 57, 70, 0.15);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--red);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .sidebar-close:hover {
+            background: var(--red);
+            color: white;
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            flex: 1;
+        }
+
+        .sidebar-nav a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.2s;
+            border-bottom: 1px solid rgba(230,57,70,0.1);
+        }
+
+        .sidebar-nav a:hover {
+            color: var(--red);
+            padding-left: 8px;
+        }
+
+        .sidebar-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--red);
+            transition: width 0.25s;
+        }
+
+        .sidebar-nav a:hover::after {
+            width: 100%;
+        }
+
+        .sidebar-footer {
+            margin-top: auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(230,57,70,0.2);
+        }
+
+        .sidebar-icons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: var(--gray-600);
+        }
+
+        .sidebar-icons i {
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .sidebar-icons i:hover {
+            color: var(--red);
+            transform: scale(1.2);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .refund-card {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu, .header-icons .fa-search, .header-icons .fa-user {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .refund-card {
+                padding: 30px;
+            }
+            .refund-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .refund-card {
+                padding: 25px;
+            }
+            .refund-header h1 {
+                font-size: 1.8rem;
+            }
+            .refund-content h2 {
+                font-size: 1.5rem;
+            }
+            .refund-content h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">Slide<span>Pro</span></div>
+                <nav class="nav-menu">
+                    <a href="index.html">Sản phẩm</a>
+                    <a href="#">Bộ sưu tập</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Hỗ trợ</a>
+                </nav>
+                <div class="header-icons">
+                    <i class="fas fa-search" id="search-icon"></i>
+                    <i class="fas fa-user"></i>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-badge" id="cart-badge">3</span>
+                    </div>
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="search-box" id="search-box">
+                <input type="text" class="search-input" placeholder="Tìm template PowerPoint...">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="refund-section">
+                <div class="refund-header">
+                    <h1>Chính sách <span>Hoàn tiền</span></h1>
+                    <div class="last-update">
+                        <i class="fas fa-calendar-alt" style="margin-right: 8px;"></i> Cập nhật lần cuối: 01/03/2025
+                    </div>
+                </div>
+
+                <div class="refund-card">
+                    <div class="refund-content">
+                        <!-- Nội dung chính sách hoàn tiền – đồng bộ thương hiệu SlidePro, rõ ràng, minh bạch -->
+                        
+                        <h2>1. Nguyên tắc chung</h2>
+                        <p>Do <strong>sản phẩm số (mẫu PowerPoint, template, file thiết kế)</strong> có tính chất đặc thù: có thể tải xuống và sao chép ngay lập tức, đồng thời không thể "trả lại" như hàng hóa vật lý, chúng tôi áp dụng chính sách hoàn tiền chặt chẽ, minh bạch và công bằng cho cả người mua lẫn người bán.</p>
+                        <div class="refund-highlight">
+                            <p><strong>Chúng tôi không hỗ trợ hoàn tiền dưới bất kỳ hình thức nào sau khi bạn đã tải thành công file sản phẩm, trừ các trường hợp ngoại lệ được quy định cụ thể tại mục 2 dưới đây.</strong></p>
+                        </div>
+                        <p>Tuy nhiên, chúng tôi luôn khuyến khích giải pháp <strong>hỗ trợ kỹ thuật, sửa lỗi hoặc đổi sản phẩm</strong> thay vì hoàn tiền, nhằm mang lại trải nghiệm tốt nhất cho bạn.</p>
+
+                        <h2>2. Các trường hợp được hoàn tiền</h2>
+                        <p>Bạn có thể yêu cầu hoàn tiền nếu rơi vào một trong các tình huống sau:</p>
+                        
+                        <h3>2.1. File bị lỗi, hỏng, không mở được</h3>
+                        <ul>
+                            <li>File tải về bị hỏng, không giải nén được, hoặc không mở được bằng phiên bản PowerPoint hợp lệ (2016 trở lên).</li>
+                            <li>Font chữ, hình ảnh, hiệu ứng bị mất, lỗi hiển thị nghiêm trọng do lỗi từ file gốc, không phải do cài đặt máy tính của bạn.</li>
+                            <li><em>Điều kiện:</em> Bạn phải cung cấp ảnh chụp màn hình/video ghi lại lỗi, gửi về email hỗ trợ trong vòng <strong>7 ngày</strong> kể từ ngày mua.</li>
+                        </ul>
+
+                        <h3>2.2. Tải nhầm sản phẩm do giao diện/ thao tác</h3>
+                        <ul>
+                            <li>Bạn mua và tải nhầm sản phẩm không đúng nhu cầu, và <strong>chưa mở/ sử dụng file</strong> dưới bất kỳ hình thức nào.</li>
+                            <li><em>Điều kiện:</em> Yêu cầu phải được gửi trong vòng <strong>30 phút</strong> kể từ thời điểm thanh toán. Quá thời gian này, chúng tôi sẽ từ chối hoàn tiền và khuyến khích bạn sử dụng sản phẩm đã mua hoặc mua sản phẩm khác.</li>
+                        </ul>
+
+                        <h3>2.3. Sai sót nghiêm trọng trong mô tả sản phẩm</h3>
+                        <ul>
+                            <li>Sản phẩm được mô tả có bao gồm tính năng/tài nguyên nhưng thực tế không có (ví dụ: quảng cáo "có 100 slide" nhưng thực tế chỉ 20 slide; quảng cáo "có hiệu ứng chuyên nghiệp" nhưng file chỉ là ảnh tĩnh).</li>
+                            <li><em>Điều kiện:</em> Sai lệch phải mang tính chất nghiêm trọng, ảnh hưởng đến giá trị sử dụng cốt lõi. Các khác biệt nhỏ về màu sắc, bố cục không thuộc diện hoàn tiền.</li>
+                        </ul>
+
+                        <h3>2.4. Trùng lặp thanh toán</h3>
+                        <ul>
+                            <li>Bạn bị trừ tiền hai lần cho cùng một đơn hàng, hoặc thanh toán thành công nhưng hệ thống không ghi nhận đơn hàng.</li>
+                            <li><em>Điều kiện:</em> Cung cấp mã giao dịch, sao kê ngân hàng hoặc ảnh chụp màn hình lịch sử thanh toán.</li>
+                        </ul>
+
+                        <h3>2.5. Không nhận được file sau khi thanh toán</h3>
+                        <ul>
+                            <li>Bạn đã thanh toán nhưng không nhận được email chứa link tải, và không thể tải file từ lịch sử đơn hàng trên website.</li>
+                            <li><em>Điều kiện:</em> Liên hệ với chúng tôi trong vòng <strong>7 ngày</strong>; nếu quá thời gian này, chúng tôi có thể hỗ trợ gửi lại file nhưng không hoàn tiền.</li>
+                        </ul>
+
+                        <h2>3. Các trường hợp không được hoàn tiền</h2>
+                        <div class="refund-note">
+                            <strong><i class="fas fa-exclamation-triangle"></i> Lưu ý:</strong> Chúng tôi có quyền từ chối hoàn tiền trong các trường hợp sau:
+                        </div>
+                        <ul>
+                            <li>Bạn <strong>đã tải và sử dụng file</strong>, sau đó đổi ý, không thích thiết kế, không phù hợp thương hiệu, v.v.</li>
+                            <li>Bạn mua nhầm sản phẩm nhưng đã mở file, chỉnh sửa hoặc lưu lại.</li>
+                            <li>Sản phẩm không tương thích với phiên bản PowerPoint cũ (2007, 2010, 2013) – chúng tôi đã ghi rõ yêu cầu phiên bản trong mô tả.</li>
+                            <li>Bạn không đọc kỹ mô tả, dung lượng, số lượng slide, định dạng file trước khi mua.</li>
+                            <li>Yêu cầu hoàn tiền gửi sau <strong>7 ngày</strong> kể từ ngày mua.</li>
+                            <li>Phát hiện hành vi lợi dụng chính sách hoàn tiền để tải miễn phí sản phẩm (mua – tải – đòi hoàn tiền).</li>
+                            <li>Sản phẩm thuộc danh mục <strong>giảm giá sâu, khuyến mãi đặc biệt, flash sale</strong> – đã được thông báo trước khi mua.</li>
+                        </ul>
+
+                        <h2>4. Quy trình yêu cầu hoàn tiền</h2>
+                        <ul class="step-list">
+                            <li><strong>Bước 1 – Gửi yêu cầu:</strong> Bạn vui lòng gửi email đến <strong>support@slidepro.com</strong> với tiêu đề: <em>"Yêu cầu hoàn tiền – Mã đơn hàng [mã số]"</em>. Nội dung bao gồm: Họ tên, email đăng nhập, mã đơn hàng, ngày mua, lý do cụ thể, kèm bằng chứng (ảnh chụp lỗi, video, sao kê...).</li>
+                            <li><strong>Bước 2 – Xác minh:</strong> Bộ phận hỗ trợ sẽ kiểm tra và phản hồi trong vòng <strong>24–48 giờ làm việc</strong>. Trong một số trường hợp, chúng tôi có thể yêu cầu thêm thông tin hoặc đề xuất phương án thay thế (sửa lỗi, đổi sản phẩm khác).</li>
+                            <li><strong>Bước 3 – Xử lý:</strong> Nếu yêu cầu được chấp thuận: Hoàn tiền qua đúng phương thức thanh toán bạn đã dùng. Thời gian xử lý tùy thuộc vào ngân hàng/đối tác thanh toán, thường từ <strong>5–10 ngày làm việc</strong>. Nếu yêu cầu bị từ chối: Chúng tôi sẽ giải thích rõ lý do qua email.</li>
+                        </ul>
+
+                        <h2>5. Chính sách đổi sản phẩm</h2>
+                        <p>Thay vì hoàn tiền, chúng tôi <strong>khuyến khích bạn đổi sản phẩm khác</strong> có giá trị tương đương hoặc cao hơn (bạn bù thêm tiền nếu chênh lệch).</p>
+                        <ul>
+                            <li><strong>Điều kiện áp dụng:</strong> Sản phẩm đã mua chưa qua sử dụng, hoặc có lỗi kỹ thuật nhưng chúng tôi không thể khắc phục kịp thời.</li>
+                            <li>Mỗi đơn hàng chỉ được đổi <strong>01 lần</strong>.</li>
+                            <li>Không áp dụng đổi trả với sản phẩm đã mua từ 30 ngày trở lên.</li>
+                        </ul>
+
+                        <h2>6. Chính sách hoàn tiền cho người bán (Marketplace)</h2>
+                        <p><em>(Áp dụng khi SlidePro mở tính năng cho phép người dùng đăng bán mẫu PowerPoint)</em></p>
+                        <ul>
+                            <li>Người mua yêu cầu hoàn tiền vì lỗi từ phía người bán (file sai mô tả, vi phạm bản quyền...): Chúng tôi sẽ hoàn tiền cho người mua và <strong>khấu trừ số tiền này vào doanh thu của người bán</strong>.</li>
+                            <li>Người bán có trách nhiệm phối hợp xác minh; nếu từ chối hợp tác, tài khoản có thể bị tạm khóa.</li>
+                        </ul>
+
+                        <h2>7. Ngoại lệ và các vấn đề phát sinh</h2>
+                        <ul>
+                            <li>Trong trường hợp bất khả kháng (thiên tai, hỏa hoạn, lỗi hệ thống kéo dài), chúng tôi sẽ xem xét hoàn tiền từng trường hợp cụ thể.</li>
+                            <li>Chúng tôi cam kết minh bạch và không phân biệt đối xử trong xử lý yêu cầu hoàn tiền.</li>
+                            <li>Chúng tôi có quyền từ chối phục vụ, hỗ trợ hoặc khóa tài khoản nếu phát hiện hành vi lạm dụng chính sách.</li>
+                        </ul>
+
+                        <h2>8. Liên hệ hỗ trợ</h2>
+                        <p>Mọi thắc mắc hoặc yêu cầu liên quan đến hoàn tiền, đổi trả, vui lòng liên hệ:</p>
+                        <p>
+                            <strong>Bộ phận Chăm sóc khách hàng</strong><br>
+                            📧 Email: support@slidepro.com<br>
+                            📞 Điện thoại: 028 9999 8888 (ext. 456)<br>
+                            ⏱️ Thời gian làm việc: Thứ 2 – Thứ 6, 8:00 – 17:00
+                        </p>
+                        <hr>
+                        <p style="font-style: italic; color: var(--gray-600);">* Chính sách này có hiệu lực kể từ ngày công bố và có thể được sửa đổi bổ sung bất kỳ lúc nào. Phiên bản cập nhật sẽ được đăng tải trên website. Bản quyền nội dung © 2025 SlidePro.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER (giống trang chủ) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">Slide<span>Pro</span></div>
+                    <p>SlidePro cung cấp hàng ngàn template PowerPoint chất lượng cao, dễ chỉnh sửa, phù hợp cho mọi nhu cầu thuyết trình.</p>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Giới thiệu</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Đối tác</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Chính sách</h4>
+                    <ul class="footer-links">
+                        <li><a href="dieu-khoan-dich-vu.html">Điều khoản dịch vụ</a></li>
+                        <li><a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a></li>
+                        <li><a href="chinh-sach-hoan-tien.html">Chính sách hoàn tiền</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Trung tâm trợ giúp</a></li>
+                        <li><a href="#">Hướng dẫn tải file</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Khiếu nại</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 SlidePro. Thiết kế và phát triển bởi đội ngũ SlidePro.
+            </div>
+        </div>
+    </footer>
+
+    <!-- MOBILE SIDEBAR - LIQUID GLASS (giống trang chủ) -->
+    <div class="mobile-sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">Slide<span>Pro</span></div>
+            <div class="sidebar-close" id="sidebarClose">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <div class="sidebar-nav">
+            <a href="index.html">Sản phẩm</a>
+            <a href="#">Bộ sưu tập</a>
+            <a href="#">Blog</a>
+            <a href="#">Hỗ trợ</a>
+            <a href="#">Liên hệ</a>
+        </div>
+        <div class="sidebar-footer">
+            <div class="sidebar-icons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user"></i>
+                <div class="cart-icon" style="position: relative;">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" style="top: -8px; right: -10px;">3</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            "use strict";
+
+            // ----- 1. SEARCH TOGGLE -----
+            const searchIcon = document.getElementById('search-icon');
+            const searchBox = document.getElementById('search-box');
+            if (searchIcon && searchBox) {
+                searchIcon.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    searchBox.classList.toggle('active');
+                });
+            }
+
+            // ----- 2. MOBILE SIDEBAR TOGGLE -----
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const sidebar = document.getElementById('mobileSidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const closeBtn = document.getElementById('sidebarClose');
+
+            function openSidebar() {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeSidebar() {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            if (mobileBtn) {
+                mobileBtn.addEventListener('click', openSidebar);
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeSidebar);
+            }
+
+            if (overlay) {
+                overlay.addEventListener('click', closeSidebar);
+            }
+
+            // ----- 3. CART BADGE DEMO (giữ cho đồng bộ) -----
+            const cartBadge = document.getElementById('cart-badge');
+            if (cartBadge) {
+                let cartCount = 3;
+                // Giữ nguyên số lượng demo
+            }
+        })();
+    </script>
+</body>
+</html>
