@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>Slide Tết 2026 - Mẫu PowerPoint Bính Ngọ</title>
+    
+    <!-- Fonts & Icons (giữ font Tết) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600;700&family=Montserrat:wght@400;700;800&family=Dancing+Script:wght@700&family=Noto+Serif+JP:wght@400;700&family=Playfair+Display:wght@700&family=Merriweather:wght@400;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ----- RESET & BIẾN MÀU TẾT (ĐỎ - VÀNG) ----- */
+        :root {
+            --primary-red: #E53935;
+            --secondary-red: #C62828;
+            --deep-red: #B71C1C;
+            --gold: #FFD700;
+            --light-gold: #FFF9C4;
+            --dark-gold: #FFB300;
+            --orange: #FF9800;
+            --light-orange: #FFCC80;
+            --green: #2E7D32;
+            --white: #FFFFFF;
+            --cream: #FFF8E1;
+            --black: #212121;
+            --gray: #757575;
+            --light-gray: #F5F5F5;
+            --shadow: 0 8px 30px rgba(183, 28, 28, 0.15);
+            --transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --border-radius: 24px;
+            --card-radius: 36px;     /* Tăng độ bo tròn cho card */
+            --img-radius: 30px 30px 0 0; /* Bo góc ảnh trên */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #fff5f0;
+            color: var(--black);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* ----- NỀN TẾT ĐẶC TRƯNG ----- */
+        .tet-background {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -3;
+            background: 
+                linear-gradient(135deg, rgba(229,57,53,0.03) 0%, rgba(255,152,0,0.03) 100%),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><defs><pattern id="p" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M20,20 L60,20 L60,60 L20,60 Z" fill="none" stroke="%23E53935" stroke-width="1" stroke-opacity="0.05"/><circle cx="40" cy="40" r="15" fill="%23FFD700" fill-opacity="0.03"/></pattern></defs><rect width="100%25" height="100%25" fill="url(%23p)"/></svg>'),
+                linear-gradient(45deg, #fff5f0 0%, #fffaf0 100%);
+            background-attachment: fixed;
+        }
+
+        /* Hoa mai/đào rơi */
+        .falling-container {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: -2; overflow: hidden;
+        }
+        .falling-flower {
+            position: absolute; top: -20px; opacity: 0.6;
+            filter: drop-shadow(0 0 3px rgba(255,215,0,0.3));
+        }
+        .flower-peach { width: 12px; height: 12px; background: radial-gradient(circle at 30% 30%, #ff9aa2, #ff6b6b); border-radius: 50% 50% 50% 0; transform: rotate(45deg); animation: falling-peach linear infinite; }
+        .flower-apricot { width: 10px; height: 10px; background: radial-gradient(circle at 30% 30%, #ffd166, #ff9e00); border-radius: 50% 50% 50% 0; transform: rotate(45deg); animation: falling-apricot linear infinite; }
+        @keyframes falling-peach { 0% { top: -20px; opacity: 0; } 10% { opacity: 0.6; } 100% { top: 100vh; transform: rotate(45deg) translateX(100px) rotate(360deg); opacity: 0; } }
+        @keyframes falling-apricot { 0% { top: -20px; opacity: 0; } 10% { opacity: 0.6; } 100% { top: 100vh; transform: rotate(45deg) translateX(-80px) rotate(-360deg); opacity: 0; } }
+
+        /* Lồng đèn */
+        .lantern-container { position: fixed; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+        .lantern { position: absolute; width: 40px; height: 50px; filter: drop-shadow(0 0 8px rgba(255,215,0,0.4)); }
+        .lantern-1 { top: 10%; left: 3%; animation: swing 5s infinite ease-in-out; }
+        .lantern-2 { top: 20%; right: 5%; animation: swing 6s infinite ease-in-out; }
+        .lantern-body { width: 100%; height: 80%; background: linear-gradient(to bottom, var(--primary-red), var(--secondary-red)); border-radius: 20px 20px 10px 10px; position: relative; }
+        .lantern-body::before { content: ''; position: absolute; top: -5px; left: 50%; transform: translateX(-50%); width: 20px; height: 10px; background-color: var(--dark-gold); border-radius: 5px 5px 0 0; }
+        .lantern-light { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 15px; height: 20px; background: radial-gradient(circle, rgba(255,215,0,0.7) 0%, rgba(255,152,0,0.3) 70%, transparent); border-radius: 50%; filter: blur(4px); animation: flicker 3s infinite alternate; }
+        @keyframes swing { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(12px) rotate(3deg); } }
+        @keyframes flicker { 0% { opacity: 0.5; } 100% { opacity: 0.9; } }
+
+        /* ----- HEADER & LOGO ----- */
+        header {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 80%);
+            color: white; padding: 0.8rem 2rem; position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 6px 20px rgba(198,40,40,0.4); border-bottom: 3px solid var(--gold);
+        }
+        .header-container {
+            display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 0 auto; flex-wrap: wrap;
+        }
+        .logo {
+            display: flex; align-items: center; gap: 10px; font-family: 'Dancing Script', cursive; font-size: 1.9rem;
+            color: var(--gold); text-shadow: 2px 2px 0 rgba(0,0,0,0.2); background: rgba(255,255,255,0.1); padding: 0.2rem 1rem;
+            border-radius: 40px; border: 1.5px solid var(--gold);
+        }
+        .logo i { font-size: 2rem; filter: drop-shadow(0 0 5px gold); }
+        .logo span { font-size: 1.5rem; }
+
+        .nav-area { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .nav-links {
+            display: flex; list-style: none; gap: 0.6rem; background: rgba(255,255,255,0.1); padding: 0.4rem 0.8rem; border-radius: 50px;
+            backdrop-filter: blur(4px);
+        }
+        .nav-links a {
+            color: white; text-decoration: none; font-weight: 600; padding: 0.5rem 1rem; border-radius: 50px;
+            display: flex; align-items: center; gap: 6px; transition: var(--transition); font-size: 0.9rem;
+        }
+        .nav-links a i { font-size: 1rem; }
+        .nav-links a:hover { background: linear-gradient(45deg, var(--gold), var(--orange)); color: var(--black); transform: translateY(-2px); }
+
+        .cart-icon {
+            position: relative; background: rgba(255,215,0,0.25); padding: 0.6rem 1rem; border-radius: 40px;
+            display: flex; align-items: center; gap: 8px; color: var(--gold); font-weight: bold; border: 1px solid var(--gold);
+            cursor: pointer; transition: var(--transition);
+        }
+        .cart-icon:hover { background: var(--gold); color: var(--secondary-red); transform: scale(1.05); }
+        .cart-count { background: var(--deep-red); color: white; border-radius: 50%; padding: 0.1rem 0.5rem; font-size: 0.8rem; margin-left: 5px; }
+
+        .mobile-menu-btn { display: none; background: var(--gold); border: none; color: var(--deep-red); font-size: 1.5rem; width: 45px; height: 45px; border-radius: 50%; }
+
+        /* ----- BANNER TẾT (ảnh từ thư mục images/) ----- */
+        .banner {
+            background: linear-gradient(135deg, rgba(198,40,40,0.8), rgba(183,28,28,0.9)), url('images/banner-tet-2026.jpg');
+            background-size: cover; background-position: center; background-blend-mode: overlay;
+            padding: 4rem 2rem; margin: 1.5rem 1.5rem 0; border-radius: 60px; border: 3px solid var(--gold);
+            box-shadow: var(--shadow); color: white; text-align: center;
+        }
+        .banner h1 { font-size: 2.8rem; font-family: 'Playfair Display', serif; color: var(--gold); text-shadow: 4px 4px 0 rgba(0,0,0,0.2); }
+        .banner p { font-size: 1.2rem; max-width: 700px; margin: 1rem auto; background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 60px; backdrop-filter: blur(2px); }
+
+        /* ----- BỘ LỌC & TÌM KIẾM (SẮP XẾP RIÊNG BIỆT) ----- */
+        .filter-section {
+            background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); margin: 2rem 1.5rem; padding: 1.8rem 2rem;
+            border-radius: 60px; border: 2px solid var(--gold); box-shadow: 0 6px 20px rgba(229,57,53,0.2);
+            display: flex; flex-direction: column; gap: 1.5rem;
+        }
+        /* Hàng 1: Tìm kiếm */
+        .search-row {
+            display: flex; width: 100%;
+        }
+        .search-box {
+            display: flex; flex: 1; max-width: 600px; background: white; border-radius: 60px;
+            border: 2px solid var(--primary-red); overflow: hidden;
+        }
+        .search-box input { flex: 1; padding: 0.8rem 1.2rem; border: none; outline: none; font-size: 1rem; }
+        .search-box button { background: linear-gradient(45deg, var(--primary-red), var(--secondary-red)); border: none; padding: 0.8rem 1.8rem; color: white; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .search-box button:hover { background: var(--gold); color: var(--deep-red); }
+
+        /* Hàng 2: Bộ lọc danh mục & chủ đề */
+        .filter-row {
+            display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;
+        }
+        .filter-label {
+            display: flex; align-items: center; gap: 6px; font-weight: 600; color: var(--deep-red);
+        }
+        .filter-select {
+            padding: 0.6rem 1.5rem; border-radius: 40px; border: 2px solid var(--primary-red); background: white;
+            font-weight: 600; color: var(--deep-red); cursor: pointer; outline: none; min-width: 180px;
+        }
+
+        /* Hàng 3: Sắp xếp (riêng, nhỏ gọn) */
+        .sort-row {
+            display: flex; align-items: center; gap: 0.8rem; margin-top: 0.2rem;
+        }
+        .sort-label {
+            font-size: 0.9rem; font-weight: 600; color: var(--deep-red); background: var(--light-gold);
+            padding: 0.3rem 1rem; border-radius: 30px; border: 1px solid var(--dark-gold);
+        }
+        .sort-select {
+            padding: 0.4rem 1.2rem; border-radius: 40px; border: 2px solid var(--dark-gold); background: white;
+            font-weight: 600; color: var(--black); cursor: pointer; outline: none; font-size: 0.9rem;
+        }
+
+        /* ----- CARD SẢN PHẨM SIÊU BO TRÒN (góc 36px) ----- */
+        .product-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; padding: 0 1.5rem 2rem;
+            max-width: 1400px; margin: 0 auto;
+        }
+        .product-card {
+            background: rgba(255,255,245,0.95); backdrop-filter: blur(4px); border-radius: var(--card-radius);
+            border: 2px solid rgba(255,215,0,0.6); box-shadow: 0 8px 20px rgba(198,40,40,0.1); overflow: hidden;
+            transition: var(--transition); cursor: pointer; position: relative;
+        }
+        .product-card:hover { transform: translateY(-12px); border-color: var(--gold); box-shadow: 0 16px 30px rgba(229,57,53,0.3); }
+        .card-img {
+            width: 100%; height: 190px; object-fit: cover; border-radius: var(--img-radius); /* bo góc trên */
+            border-bottom: 3px solid var(--gold); transition: transform 0.4s;
+        }
+        .product-card:hover .card-img { transform: scale(1.03); }
+        .card-badge {
+            position: absolute; top: 18px; right: 18px; background: linear-gradient(45deg, var(--gold), var(--orange));
+            color: var(--deep-red); font-weight: 800; padding: 0.3rem 1rem; border-radius: 50px; font-size: 0.75rem;
+            border: 1px solid white; text-transform: uppercase; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card-info { padding: 1.5rem 1.2rem 1.2rem; }
+        .card-title { font-size: 1.25rem; font-weight: 700; color: var(--secondary-red); margin-bottom: 0.3rem; font-family: 'Playfair Display', serif; }
+        .card-category { font-size: 0.8rem; color: var(--gray); margin-bottom: 0.5rem; display: flex; gap: 8px; }
+        .card-price { font-size: 1.4rem; font-weight: bold; color: var(--green); display: flex; align-items: baseline; gap: 5px; }
+        .card-price small { font-size: 0.8rem; color: var(--gray); font-weight: normal; }
+        .add-to-cart-btn {
+            width: 100%; margin-top: 1rem; padding: 0.7rem; background: linear-gradient(45deg, var(--primary-red), var(--secondary-red));
+            border: none; border-radius: 60px; color: white; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 8px;
+            transition: var(--transition); border: 1px solid var(--gold); font-size: 0.95rem;
+        }
+        .add-to-cart-btn:hover { background: var(--gold); color: var(--deep-red); }
+
+        /* ----- GIỎ HÀNG & THANH TOÁN ----- */
+        .cart-section {
+            background: rgba(255,248,225,0.9); backdrop-filter: blur(8px); margin: 2rem 1.5rem; padding: 2rem;
+            border-radius: 60px; border: 3px solid var(--gold); box-shadow: var(--shadow);
+        }
+        .cart-title { font-size: 1.8rem; color: var(--secondary-red); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 15px; }
+        .cart-items { list-style: none; margin-bottom: 1.5rem; }
+        .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 1.5rem; background: white; border-radius: 50px; margin-bottom: 0.8rem; border-left: 8px solid var(--gold); }
+        .cart-item-info { display: flex; flex-direction: column; }
+        .cart-item-title { font-weight: 700; color: var(--deep-red); }
+        .cart-item-price { color: var(--green); font-weight: 600; }
+        .cart-remove { color: var(--primary-red); cursor: pointer; font-size: 1.2rem; }
+        .cart-total { font-size: 1.6rem; font-weight: bold; color: var(--deep-red); text-align: right; padding-top: 1rem; border-top: 2px dashed var(--gold); }
+        .checkout-btn { background: linear-gradient(45deg, var(--gold), var(--orange)); border: none; padding: 0.8rem 2.5rem; border-radius: 50px; font-weight: 800; color: var(--black); margin-top: 1rem; cursor: pointer; transition: 0.2s; font-size: 1.1rem; }
+        .checkout-btn:hover { background: var(--green); color: white; }
+
+        /* ----- MODAL ĐĂNG NHẬP / TẠO TK ----- */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(6px);
+            display: flex; justify-content: center; align-items: center; z-index: 3000; visibility: hidden; opacity: 0;
+            transition: 0.3s;
+        }
+        .modal-overlay.active { visibility: visible; opacity: 1; }
+        .auth-modal {
+            background: linear-gradient(145deg, #fffef7, #fff5e6); border-radius: 70px; padding: 2.5rem; max-width: 450px; width: 90%;
+            border: 5px solid var(--gold); box-shadow: 0 20px 40px rgba(0,0,0,0.3); text-align: center;
+        }
+        .auth-modal h3 { color: var(--secondary-red); font-size: 2rem; margin-bottom: 0.5rem; font-family: 'Dancing Script', cursive; }
+        .auth-input { width: 100%; padding: 0.9rem 1.5rem; border: 2px solid var(--light-gold); border-radius: 60px; margin: 0.8rem 0; font-size: 1rem; outline: none; }
+        .auth-input:focus { border-color: var(--gold); }
+        .auth-btn { background: linear-gradient(45deg, var(--primary-red), var(--secondary-red)); color: white; border: none; padding: 0.9rem; border-radius: 60px; font-weight: bold; width: 100%; margin: 1rem 0; font-size: 1.1rem; }
+        .auth-switch { color: var(--gray); margin-top: 0.5rem; }
+        .auth-switch span { color: var(--primary-red); font-weight: bold; cursor: pointer; }
+
+        /* ----- MODAL CHI TIẾT SẢN PHẨM ----- */
+        .product-modal .modal {
+            background: white; border-radius: 50px; padding: 2rem; border: 5px solid var(--gold); max-width: 600px;
+        }
+
+        /* ----- FOOTER PHONG CÁCH TẾT ----- */
+        footer {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-red) 100%); color: white; padding: 3rem 2rem 1.5rem;
+            border-top: 6px solid var(--gold); margin-top: 3rem;
+        }
+        .footer-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; }
+        .footer-column h3 { color: var(--gold); font-size: 1.3rem; margin-bottom: 1.2rem; font-family: 'Playfair Display', serif; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 5px; }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 0.8rem; }
+        .footer-column a { color: var(--light-gold); text-decoration: none; transition: 0.2s; display: flex; align-items: center; gap: 6px; }
+        .footer-column a:hover { color: var(--gold); transform: translateX(5px); }
+
+        /* Floating contact CSKH */
+        .floating-contact { position: fixed; bottom: 30px; right: 25px; display: flex; flex-direction: column; gap: 12px; z-index: 100; }
+        .contact-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; box-shadow: 0 8px 18px rgba(0,0,0,0.25); transition: 0.25s; }
+        .contact-fb { background: #1877F2; }
+        .contact-mess { background: #0099FF; }
+        .contact-btn:hover { transform: scale(1.15) rotate(5deg); }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .nav-links { position: fixed; top: 80px; left: 0; width: 100%; background: var(--secondary-red); flex-direction: column; align-items: center; transform: translateY(-150%); opacity: 0; transition: 0.4s; border-radius: 0 0 30px 30px; padding: 1rem 0; }
+            .nav-links.active { transform: translateY(0); opacity: 1; }
+            .mobile-menu-btn { display: flex; justify-content: center; align-items: center; }
+            .filter-row { flex-direction: column; align-items: stretch; }
+            .filter-select { width: 100%; }
+        }
+        @media (max-width: 768px) {
+            .banner h1 { font-size: 2rem; }
+            .search-box { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Tết & trang trí -->
+    <div class="tet-background"></div>
+    <div class="falling-container" id="falling-container"></div>
+    <div class="lantern-container">
+        <div class="lantern lantern-1"><div class="lantern-body"></div><div class="lantern-light"></div></div>
+        <div class="lantern lantern-2"><div class="lantern-body"></div><div class="lantern-light"></div></div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-file-powerpoint"></i>
+                <span>Slide Tết 2026</span>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            
+            <div class="nav-area">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home"><i class="fas fa-home"></i> Trang chủ</a></li>
+                    <li><a href="#products"><i class="fas fa-sliders-h"></i> Mẫu slide</a></li>
+                    <li><a href="#"><i class="fas fa-cogs"></i> Dịch vụ khác</a></li>
+                    <li><a href="#" id="contactCskhLink"><i class="fas fa-headset"></i> CSKH</a></li>
+                    <li><a href="#" id="accountBtn"><i class="fas fa-user-circle"></i> Tài khoản</a></li>
+                </ul>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i> Giỏ <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER -->
+    <section id="home" class="banner" style="background-image: linear-gradient(135deg, rgba(198,40,40,0.8), rgba(183,28,28,0.9)), url('images/banner-tet-powerpoint.jpg');">
+        <h1>MẪU SLIDE TẾT BÍNH NGỌ 2026</h1>
+        <p>✨ 200+ mẫu PowerPoint chuyên nghiệp, đậm đà hương sắc ngày xuân. Bo tròn siêu cấp, dễ chỉnh sửa!</p>
+    </section>
+
+    <!-- KHU VỰC TÌM KIẾM, LỌC, SẮP XẾP (ĐÃ TÁCH RIÊNG) -->
+    <div class="filter-section">
+        <!-- Hàng 1: Tìm kiếm từ khóa -->
+        <div class="search-row">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Tìm theo tên, từ khóa...">
+                <button id="searchBtn"><i class="fas fa-search"></i> Tìm</button>
+            </div>
+        </div>
+
+        <!-- Hàng 2: Bộ lọc danh mục & chủ đề (riêng) -->
+        <div class="filter-row">
+            <span class="filter-label"><i class="fas fa-tags"></i> Danh mục:</span>
+            <select id="categoryFilter" class="filter-select">
+                <option value="all">📁 Tất cả danh mục</option>
+                <option value="poster">Poster</option>
+                <option value="presentation">Bài thuyết trình</option>
+                <option value="report">Báo cáo</option>
+                <option value="infographic">Infographic</option>
+            </select>
+            <span class="filter-label"><i class="fas fa-palette"></i> Chủ đề:</span>
+            <select id="themeFilter" class="filter-select">
+                <option value="all">🎯 Tất cả chủ đề</option>
+                <option value="tet">Tết</option>
+                <option value="cuisine">Ẩm thực</option>
+                <option value="history">Lịch sử</option>
+                <option value="education">Giáo dục</option>
+                <option value="business">Kinh doanh</option>
+            </select>
+        </div>
+
+        <!-- Hàng 3: Sắp xếp (riêng, nhỏ gọn) -->
+        <div class="sort-row">
+            <span class="sort-label"><i class="fas fa-arrow-up-wide-short"></i> Sắp xếp:</span>
+            <select id="sortSelect" class="sort-select">
+                <option value="newest">🆕 Mới nhất</option>
+                <option value="bestseller">🔥 Bán chạy</option>
+                <option value="priceAsc">💰 Giá thấp → cao</option>
+                <option value="priceDesc">💰 Giá cao → thấp</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- PRODUCT GRID - Các card bo tròn 36px -->
+    <div id="products" class="product-grid"></div>
+
+    <!-- KHU VỰC GIỎ HÀNG VÀ THANH TOÁN -->
+    <section class="cart-section" id="cartSection">
+        <div class="cart-title">
+            <i class="fas fa-shopping-bag" style="color: var(--gold);"></i> Giỏ hàng của bạn
+        </div>
+        <div id="cartContainer">
+            <ul class="cart-items" id="cartList"></ul>
+            <div class="cart-total" id="cartTotal">Tổng: 0₫</div>
+            <button class="checkout-btn" id="checkoutBtn"><i class="fas fa-credit-card"></i> Thanh toán ngay</button>
+        </div>
+        <div id="emptyCartMsg" style="text-align: center; padding: 2rem; color: var(--gray); display: none;">
+            <i class="fas fa-box-open" style="font-size: 3rem; opacity: 0.5;"></i> <br> Giỏ hàng trống. Hãy chọn ngay mẫu slide yêu thích!
+        </div>
+    </section>
+
+    <!-- FOOTER ĐẦY ĐỦ: Hướng dẫn & Về chúng tôi -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3><i class="fas fa-book-open"></i> Hướng dẫn</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Mua bài thuyết trình</a></li>
+                    <li><a href="#"><i class="fas fa-edit"></i> Hướng dẫn chỉnh sửa</a></li>
+                    <li><a href="#"><i class="fas fa-download"></i> Hướng dẫn tải xuống</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> Câu hỏi thường gặp</a></li>
+                    <li><a href="#"><i class="fas fa-phone-alt"></i> Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3><i class="fas fa-info-circle"></i> Về chúng tôi</h3>
+                <ul>
+                    <li><a href="#"><i class="fas fa-file-signature"></i> Điều khoản</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Chính sách bảo mật</a></li>
+                    <li><a href="#"><i class="fas fa-hand-holding-usd"></i> Thanh toán</a></li>
+                    <li><a href="#"><i class="fas fa-paint-brush"></i> Dịch vụ thiết kế</a></li>
+                    <li><a href="#"><i class="fas fa-copyright"></i> Copyright © 2026 Slide Tết</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3><i class="fas fa-store"></i> Gian hàng 8A1 - Xuân 2026</h3>
+                <p style="color: var(--light-gold);">Dự án phi lợi nhuận, gây quỹ thiện nguyện. Mỗi slide là một món quà yêu thương.</p>
+                <div style="display: flex; gap: 15px; margin-top: 20px;">
+                    <a href="https://www.facebook.com" style="color: white; background: #1877F2; padding: 10px 15px; border-radius: 50px;"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#" style="color: white; background: #0099FF; padding: 10px 15px; border-radius: 50px;"><i class="fab fa-facebook-messenger"></i> Messenger</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem; color: var(--light-gold); font-size: 0.9rem; border-top: 1px solid rgba(255,215,0,0.3); padding-top: 1.5rem;">
+            <p>© 2026 - Gian hàng Mẫu PowerPoint Tết Bính Ngọ | Thiết kế bởi Huỳnh Thanh Giàu & team 8A1</p>
+        </div>
+    </footer>
+
+    <!-- MODAL ĐĂNG NHẬP / TẠO TÀI KHOẢN -->
+    <div class="modal-overlay" id="authModal">
+        <div class="auth-modal">
+            <h3><i class="fas fa-dragon"></i> Xuân 2026</h3>
+            <p style="color: var(--deep-red); margin-bottom: 1.2rem;">Đăng nhập / Tạo tài khoản</p>
+            <input type="text" class="auth-input" placeholder="Email hoặc số điện thoại" id="authIdentifier">
+            <button class="auth-btn" id="sendOtpBtn"><i class="fas fa-paper-plane"></i> Gửi mã xác thực</button>
+            <p class="auth-switch">Chưa có tài khoản? <span id="switchToRegister">Đăng ký ngay</span></p>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem;"><i class="fas fa-shield-alt"></i> Mã sẽ được gửi qua Gmail/SMS</p>
+            <button style="background: none; border: none; color: var(--gray); margin-top: 0.5rem;" id="closeAuthModal"><i class="fas fa-times-circle"></i> Đóng</button>
+        </div>
+    </div>
+
+    <!-- MODAL CHI TIẾT SẢN PHẨM -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal" style="background: white; border-radius: 50px; max-width: 600px; padding: 2rem; border: 5px solid var(--gold);">
+            <h2 style="color: var(--primary-red); margin-bottom: 1rem;" id="modalProductName">Tên slide</h2>
+            <img id="modalProductImg" src="" alt="" style="width: 100%; height: 250px; object-fit: cover; border-radius: 30px; margin-bottom: 1rem; border: 2px solid var(--gold);">
+            <p id="modalProductDesc" style="margin-bottom: 1.5rem;">Mô tả sản phẩm chi tiết sẽ được cập nhật.</p>
+            <button class="add-to-cart-btn" id="modalAddToCart" style="width: 60%; margin: 0 auto;">Thêm vào giỏ</button>
+            <button style="position: absolute; top: 15px; right: 25px; background: none; border: none; font-size: 2rem;" id="closeProductModal">&times;</button>
+        </div>
+    </div>
+
+    <!-- Floating CSKH (Facebook & Messenger) -->
+    <div class="floating-contact">
+        <a href="https://www.facebook.com" class="contact-btn contact-fb" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://m.me" class="contact-btn contact-mess" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+    </div>
+
+    <script>
+        // ---------- DỮ LIỆU MẪU SLIDE POWERPOINT (Tết chủ đạo) ----------
+        const products = [
+            { id: 1, name: 'Bộ slide Tết Bính Ngọ 2026', category: 'presentation', theme: 'tet', price: 49000, image: 'images/tet-presentation-1.jpg', badge: 'Bán chạy', isNew: false, bestSeller: true, tag: 'Tết cổ truyền', desc: '30 slide phong cách hoa đào, lì xì, lồng đèn. Bo tròn hoàn hảo.' },
+            { id: 2, name: 'Poster Tết Ngọt ngào', category: 'poster', theme: 'tet', price: 25000, image: 'images/poster-tet-1.jpg', badge: 'Mới', isNew: true, bestSeller: false, tag: 'Poster', desc: 'File PPT + PNG, dễ chỉnh sửa.' },
+            { id: 3, name: 'Ẩm thực ba miền ngày Tết', category: 'presentation', theme: 'cuisine', price: 59000, image: 'images/cuisine-tet.jpg', badge: 'Đặc sắc', isNew: false, bestSeller: true, tag: 'Ẩm thực' },
+            { id: 4, name: 'Lịch sử Tết Việt Nam', category: 'presentation', theme: 'history', price: 45000, image: 'images/history-tet.jpg', badge: 'Giáo dục', isNew: false, bestSeller: false },
+            { id: 5, name: 'Infographic Tết an toàn', category: 'infographic', theme: 'tet', price: 35000, image: 'images/infographic-tet.jpg', badge: 'Mới', isNew: true, bestSeller: false },
+            { id: 6, name: 'Slide chúc Tết doanh nghiệp', category: 'presentation', theme: 'business', price: 69000, image: 'images/business-tet.jpg', badge: 'Cao cấp', isNew: false, bestSeller: true },
+            { id: 7, name: 'Poster lì xì 2026', category: 'poster', theme: 'tet', price: 19900, image: 'images/poster-li-xi.jpg', badge: 'Giá sốc', isNew: true, bestSeller: false },
+            { id: 8, name: 'Món ngon ngày Tết', category: 'report', theme: 'cuisine', price: 39000, image: 'images/mon-ngon-tet.jpg', badge: 'Ẩm thực', isNew: false, bestSeller: false }
+        ];
+
+        // ----- BIẾN TOÀN CỤC -----
+        let cart = [];
+        let currentFilter = { search: '', category: 'all', theme: 'all', sort: 'newest' };
+
+        // ----- RENDER SẢN PHẨM -----
+        function renderProducts() {
+            let filtered = products.filter(p => {
+                const matchSearch = p.name.toLowerCase().includes(currentFilter.search.toLowerCase()) || 
+                                    (p.tag && p.tag.toLowerCase().includes(currentFilter.search.toLowerCase()));
+                const matchCategory = currentFilter.category === 'all' || p.category === currentFilter.category;
+                const matchTheme = currentFilter.theme === 'all' || p.theme === currentFilter.theme;
+                return matchSearch && matchCategory && matchTheme;
+            });
+
+            // Sắp xếp
+            if (currentFilter.sort === 'newest') filtered = filtered.sort((a,b) => (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0));
+            else if (currentFilter.sort === 'bestseller') filtered = filtered.sort((a,b) => (b.bestSeller ? 1 : 0) - (a.bestSeller ? 1 : 0));
+            else if (currentFilter.sort === 'priceAsc') filtered = filtered.sort((a,b) => a.price - b.price);
+            else if (currentFilter.sort === 'priceDesc') filtered = filtered.sort((a,b) => b.price - a.price);
+
+            const grid = document.querySelector('.product-grid');
+            grid.innerHTML = '';
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <img src="${p.image}" alt="${p.name}" class="card-img" onerror="this.src='https://placehold.co/400x300/E53935/FFD700?text=Slide+Tết'">
+                    <div class="card-badge">${p.badge || 'Hot'}</div>
+                    <div class="card-info">
+                        <div class="card-title">${p.name}</div>
+                        <div class="card-category"><span>${p.category}</span> • <span>${p.theme}</span></div>
+                        <div class="card-price">${p.price.toLocaleString()}₫ <small>/ bộ</small></div>
+                        <button class="add-to-cart-btn" data-id="${p.id}"><i class="fas fa-cart-plus"></i> Thêm vào giỏ</button>
+                    </div>
+                `;
+                // Click card -> mở modal chi tiết
+                card.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('add-to-cart-btn')) {
+                        openProductModal(p);
+                    }
+                });
+                // Nút thêm giỏ (ngăn nổi bọt)
+                const addBtn = card.querySelector('.add-to-cart-btn');
+                addBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    addToCart(p.id);
+                });
+                grid.appendChild(card);
+            });
+        }
+
+        // ----- MỞ MODAL CHI TIẾT -----
+        function openProductModal(product) {
+            const modal = document.getElementById('productModal');
+            document.getElementById('modalProductName').innerText = product.name;
+            document.getElementById('modalProductImg').src = product.image;
+            document.getElementById('modalProductDesc').innerText = product.desc || 'Mẫu slide chuyên nghiệp, thiết kế theo phong cách Tết 2026, bo tròn tinh tế, dễ dàng chỉnh sửa.';
+            const modalAddBtn = document.getElementById('modalAddToCart');
+            modalAddBtn.onclick = () => { addToCart(product.id); modal.classList.remove('active'); };
+            modal.classList.add('active');
+        }
+
+        // ----- GIỎ HÀNG -----
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existing = cart.find(item => item.id === productId);
+            if (existing) existing.quantity += 1;
+            else cart.push({ ...product, quantity: 1 });
+            updateCartUI();
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const cartList = document.getElementById('cartList');
+            const emptyMsg = document.getElementById('emptyCartMsg');
+            const cartContainer = document.getElementById('cartContainer');
+            const cartCount = document.getElementById('cartCount');
+            let total = 0;
+
+            cartList.innerHTML = '';
+            if (cart.length === 0) {
+                emptyMsg.style.display = 'block';
+                cartContainer.style.display = 'none';
+            } else {
+                emptyMsg.style.display = 'none';
+                cartContainer.style.display = 'block';
+                cart.forEach(item => {
+                    total += item.price * item.quantity;
+                    const li = document.createElement('li');
+                    li.className = 'cart-item';
+                    li.innerHTML = `
+                        <div class="cart-item-info">
+                            <span class="cart-item-title">${item.name}</span>
+                            <span class="cart-item-price">${item.price.toLocaleString()}₫ x ${item.quantity}</span>
+                        </div>
+                        <div class="cart-item-actions">
+                            <span style="font-weight: bold;">${(item.price*item.quantity).toLocaleString()}₫</span>
+                            <i class="fas fa-trash-alt cart-remove" data-id="${item.id}"></i>
+                        </div>
+                    `;
+                    li.querySelector('.cart-remove').addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        removeFromCart(item.id);
+                    });
+                    cartList.appendChild(li);
+                });
+            }
+            document.getElementById('cartTotal').innerHTML = `Tổng: ${total.toLocaleString()}₫`;
+            cartCount.innerText = cart.reduce((acc, i) => acc + i.quantity, 0);
+        }
+
+        // ----- SỰ KIỆN BỘ LỌC -----
+        document.getElementById('searchBtn').addEventListener('click', () => {
+            currentFilter.search = document.getElementById('searchInput').value;
+            renderProducts();
+        });
+        document.getElementById('searchInput').addEventListener('keyup', (e) => { if (e.key === 'Enter') document.getElementById('searchBtn').click(); });
+        document.getElementById('categoryFilter').addEventListener('change', (e) => { currentFilter.category = e.target.value; renderProducts(); });
+        document.getElementById('themeFilter').addEventListener('change', (e) => { currentFilter.theme = e.target.value; renderProducts(); });
+        document.getElementById('sortSelect').addEventListener('change', (e) => { currentFilter.sort = e.target.value; renderProducts(); });
+
+        // ----- KHỞI TẠO -----
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            updateCartUI();
+            // Tạo hoa rơi
+            const container = document.getElementById('falling-container');
+            for (let i=0; i<25; i++) {
+                let flower = document.createElement('div');
+                flower.className = 'falling-flower ' + (Math.random() > 0.5 ? 'flower-peach' : 'flower-apricot');
+                flower.style.left = Math.random() * 100 + '%';
+                flower.style.animationDuration = 15 + Math.random() * 20 + 's';
+                flower.style.animationDelay = Math.random() * 10 + 's';
+                container.appendChild(flower);
+            }
+        });
+
+        // ----- MODAL TÀI KHOẢN -----
+        const accountBtn = document.getElementById('accountBtn');
+        const authModal = document.getElementById('authModal');
+        accountBtn.addEventListener('click', (e) => { e.preventDefault(); authModal.classList.add('active'); });
+        document.getElementById('closeAuthModal').addEventListener('click', () => authModal.classList.remove('active'));
+        document.getElementById('sendOtpBtn').addEventListener('click', () => {
+            const input = document.getElementById('authIdentifier').value;
+            if (input.includes('@') || /^\d{10,11}$/.test(input)) {
+                alert(`Mã xác thực đã gửi đến ${input} (Demo)`);
+            } else alert('Vui lòng nhập email hoặc số điện thoại hợp lệ.');
+        });
+
+        // ----- THANH TOÁN -----
+        document.getElementById('checkoutBtn').addEventListener('click', () => {
+            if (cart.length === 0) alert('Giỏ hàng trống!');
+            else alert('Cảm ơn bạn! Đây là phiên bản demo thanh toán. Trang thanh toán thật sẽ được tích hợp sau.');
+        });
+
+        // ----- Mobile menu -----
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const nav = document.getElementById('navLinks');
+        mobileBtn.addEventListener('click', () => nav.classList.toggle('active'));
+
+        // ----- Đóng modal sản phẩm -----
+        document.getElementById('closeProductModal').addEventListener('click', () => {
+            document.getElementById('productModal').classList.remove('active');
+        });
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal-overlay')) e.target.classList.remove('active');
+        });
+
+        // ----- CSKH -----
+        document.getElementById('contactCskhLink').addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('Bộ phận CSKH: Facebook: @SlideTet2026 / Messenger: m.me/SlideTet2026 (demo)');
+        });
+    </script>
+</body>
+</html>
