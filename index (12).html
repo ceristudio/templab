@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, viewport-fit=cover, user-scalable=yes">
+    <title>SlidePro – PowerPoint Template đỉnh cao</title>
+    
+    <!-- Meta SEO & Social -->
+    <meta name="description" content="Hơn 2000+ template PowerPoint kinh doanh, marketing, giáo dục. Tặng 3 template khi đăng ký.">
+    <meta name="keywords" content="template powerpoint, slide báo cáo, pitch deck, mẫu powerpoint đẹp">
+    <meta name="author" content="SlidePro Team">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://slidepro.vn">
+    <meta property="og:title" content="SlidePro – Nâng tầm thuyết trình chỉ 5 phút">
+    <meta property="og:description" content="Thiết kế slide chuyên nghiệp, không cần biết đồ họa. Tải ngay – Thanh toán an toàn.">
+    <meta property="og:image" content="https://slidepro.vn/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Fonts cao cấp -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /*------------------------------------*
+         * #SETTINGS - Biến & 8‑pt grid      *
+         *------------------------------------*/
+        :root {
+            --red: #E63946;
+            --red-light: #FF8A8A;
+            --blue-accent: #2F80ED;
+            --amber: #F2C94C;
+            --gray-100: #F8FAFD;
+            --gray-200: #E9ECF0;
+            --gray-600: #5A6B7A;
+            --gray-900: #1F2A36;
+            --white: #FFFFFF;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --shadow-sm: 0 4px 16px rgba(0,0,0,0.04);
+            --shadow-md: 0 8px 24px rgba(230,57,70,0.08);
+            --shadow-lg: 0 20px 40px rgba(230,57,70,0.12);
+            --radius: 24px;
+            --radius-sm: 12px;
+            --radius-full: 999px;
+            --transition: all 0.3s cubic-bezier(0.2, 0.8, 0.4, 1);
+            
+            --space-1: 8px;
+            --space-2: 16px;
+            --space-3: 24px;
+            --space-4: 32px;
+            --space-5: 40px;
+            --space-6: 48px;
+            --space-8: 64px;
+        }
+
+        /* Dark mode tự động */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --gray-100: #1E2A36;
+                --gray-200: #2C3E4E;
+                --gray-600: #C0D0DA;
+                --gray-900: #F8FAFD;
+                --white: #1F2A36;
+                --glass-bg: rgba(30,42,54,0.8);
+                --glass-border: rgba(255,255,255,0.08);
+            }
+        }
+
+        /*------------------------------------*
+         * #GENERIC - Reset                  *
+         *------------------------------------*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--white);
+            color: var(--gray-900);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        img { max-width: 100%; display: block; height: auto; }
+        a { text-decoration: none; color: inherit; }
+        button, input { font: inherit; border: none; outline: none; background: none; }
+        ul { list-style: none; }
+
+        /*------------------------------------*
+         * #ELEMENTS - Typography & Layout   *
+         *------------------------------------*/
+        h1, h2, h3, h4, .heading {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 800; }
+        h2 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
+        h3 { font-size: 1.5rem; }
+        h4 { font-size: 1.25rem; }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 var(--space-3);
+        }
+
+        /*------------------------------------*
+         * #OBJECTS - Bố cục trừu tượng     *
+         *------------------------------------*/
+        .grid-auto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-4);
+        }
+
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+        }
+
+        /*------------------------------------*
+         * #COMPONENTS - Button, Card, ...   *
+         *------------------------------------*/
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            cursor: pointer;
+            gap: var(--space-1);
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background: var(--red);
+            color: white;
+            box-shadow: 0 8px 20px rgba(230,57,70,0.25);
+        }
+        .btn-primary:hover {
+            background: #c92a3a;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(230,57,70,0.4);
+        }
+        .btn-outline {
+            border: 2px solid var(--red);
+            color: var(--red);
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background: var(--red);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(230,57,70,0.15);
+            backdrop-filter: blur(4px);
+            color: var(--red);
+            border: 1px solid rgba(255,255,255,0.5);
+            transition: var(--transition);
+        }
+        .badge-sale {
+            background: var(--amber);
+            color: var(--gray-900);
+            border-color: var(--amber);
+        }
+
+        /* ----- CARD SẢN PHẨM (3D tilt) ----- */
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid var(--gray-200);
+            position: relative;
+            transform-style: preserve-3d;
+            transform: perspective(1000px) rotateX(0) rotateY(0);
+        }
+        .product-card:hover { box-shadow: var(--shadow-lg); }
+        .product-thumb {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            background: var(--gray-200);
+        }
+        .product-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.2, 0.9, 0.4, 1);
+        }
+        .product-card:hover .product-thumb img { transform: scale(1.08); }
+        .product-badges {
+            position: absolute;
+            top: var(--space-2);
+            left: var(--space-2);
+            display: flex;
+            gap: var(--space-1);
+            z-index: 2;
+        }
+        .quick-view-btn {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(230,57,70,0.9);
+            backdrop-filter: blur(4px);
+            color: white;
+            text-align: center;
+            padding: var(--space-2);
+            font-weight: 600;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 0.95rem;
+        }
+        .product-card:hover .quick-view-btn { transform: translateY(0); }
+        .product-info { padding: var(--space-3); }
+        .product-category {
+            font-size: 0.75rem;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin-bottom: var(--space-1);
+        }
+        .product-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: var(--space-2);
+            color: var(--gray-900);
+            line-height: 1.3;
+        }
+        .product-price {
+            display: flex;
+            align-items: baseline;
+            gap: var(--space-2);
+            margin-bottom: var(--space-2);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .current-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--red);
+        }
+        .old-price {
+            font-size: 1rem;
+            color: var(--gray-600);
+            text-decoration: line-through;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #FFB800;
+            font-size: 0.9rem;
+        }
+        .rating span { color: var(--gray-600); margin-left: 4px; }
+
+        /* ----- Toast ----- */
+        .toast {
+            position: fixed;
+            bottom: var(--space-4);
+            right: var(--space-4);
+            background: var(--gray-900);
+            color: white;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-full);
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            z-index: 9999;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            max-width: 90vw;
+        }
+        .toast.show { transform: translateY(0); opacity: 1; }
+        .toast i { color: var(--amber); }
+        .toast button {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* ----- Quick View Modal ----- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            max-width: 1000px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: var(--space-4);
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s;
+        }
+        .modal-overlay.active .modal { transform: scale(1); }
+        .modal-close {
+            position: absolute;
+            top: var(--space-3);
+            right: var(--space-3);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--gray-600);
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 10;
+        }
+        .modal-close:hover {
+            background: var(--red);
+            color: white;
+            transform: rotate(90deg);
+        }
+        .quickview-gallery { margin-bottom: var(--space-3); }
+        .swiper-slide img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+        }
+        .quickview-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+            margin-top: var(--space-3);
+        }
+        .quickview-meta {
+            background: var(--gray-100);
+            padding: var(--space-3);
+            border-radius: var(--radius);
+        }
+
+        /* ----- Testimonial Swiper ----- */
+        .testimonial-swiper { padding: var(--space-2) 0 var(--space-6); }
+        .testimonial-card {
+            background: var(--gray-100);
+            border-radius: var(--radius);
+            padding: var(--space-4);
+            height: auto;
+            border: 1px solid var(--gray-200);
+        }
+
+        /* ----- Footer ----- */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+
+        /* ----- Mobile Menu ----- */
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 320px;
+            height: 100vh;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-left: 1px solid var(--glass-border);
+            padding: var(--space-4);
+            z-index: 1000;
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(4px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+        .sidebar-overlay.active { opacity: 1; visibility: visible; }
+
+        /*------------------------------------*
+         * #RESPONSIVE - Tối ưu mobile      *
+         *------------------------------------*/
+        @media (max-width: 768px) {
+            .container { padding: 0 var(--space-2); }
+            
+            /* Header */
+            .nav-menu, .header-icons .fa-search, .header-icons .fa-user {
+                display: none;
+            }
+            .mobile-menu-btn { display: block; }
+            
+            /* Hero */
+            .hero-grid {
+                grid-template-columns: 1fr !important;
+                text-align: center;
+                gap: var(--space-4);
+            }
+            .hero-grid > div:first-child {
+                order: 1;
+            }
+            .hero-grid > div:last-child {
+                order: 0;
+                transform: none !important; /* Bỏ xoay 3D trên mobile */
+                max-width: 90%;
+                margin: 0 auto;
+            }
+            .hero-buttons { justify-content: center; }
+            
+            /* Product grid - 1 cột */
+            .grid-auto {
+                grid-template-columns: 1fr;
+                gap: var(--space-3);
+            }
+            
+            /* Category filter - scroll ngang nếu cần */
+            #categoryFilter {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                padding-bottom: var(--space-2);
+                -webkit-overflow-scrolling: touch;
+                justify-content: flex-start;
+            }
+            #categoryFilter button {
+                flex: 0 0 auto;
+            }
+            
+            /* Countdown */
+            #countdown {
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
+                padding: var(--space-2) var(--space-3);
+                gap: var(--space-2);
+            }
+            
+            /* Steps 3 bước */
+            [style*="grid-template-columns: repeat(3,1fr)"] {
+                grid-template-columns: 1fr !important;
+                gap: var(--space-4);
+            }
+            .step-icon {
+                width: 80px !important;
+                height: 80px !important;
+                font-size: 1.8rem !important;
+            }
+            
+            /* Footer */
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-4);
+            }
+            
+            /* Quick view modal */
+            .quickview-details {
+                grid-template-columns: 1fr;
+                gap: var(--space-3);
+            }
+            .modal {
+                padding: var(--space-3);
+                width: 95%;
+            }
+            
+            /* Toast */
+            .toast {
+                left: var(--space-2);
+                right: var(--space-2);
+                bottom: var(--space-2);
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            
+            .product-title { font-size: 1.1rem; }
+            .current-price { font-size: 1.2rem; }
+            
+            .countdown-item span:first-child {
+                font-size: 1.2rem !important;
+            }
+            
+            .btn {
+                padding: var(--space-1) var(--space-3);
+                font-size: 0.9rem;
+            }
+            
+            .sidebar {
+                width: 280px;
+            }
+        }
+
+        /* Utility */
+        .hidden { display: none !important; }
+        .text-center { text-align: center; }
+    </style>
+</head>
+<body>
+    <!-- Toast -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Đã thêm vào giỏ hàng</span>
+        <button id="toast-undo">Hoàn tác</button>
+    </div>
+
+    <!-- HEADER -->
+    <header style="position: sticky; top: 0; background: var(--glass-bg); backdrop-filter: blur(16px); z-index: 100; border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: var(--space-2) 0;">
+                <div class="logo" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--red);">
+                    Slide<span style="color: var(--gray-900);">Pro</span>
+                </div>
+                
+                <!-- Desktop menu -->
+                <nav class="nav-menu" style="display: flex; gap: var(--space-2); background: var(--glass-bg); padding: var(--space-1) var(--space-2); border-radius: var(--radius-full);">
+                    <a href="tat-ca-san-pham.html" style="padding: var(--space-1) var(--space-2); border-radius: var(--radius-full); font-weight: 600;">Sản phẩm</a>
+                    <a href="#categories" style="padding: var(--space-1) var(--space-2); border-radius: var(--radius-full); font-weight: 600;">Bộ sưu tập</a>
+                    <a href="#blog" style="padding: var(--space-1) var(--space-2); border-radius: var(--radius-full); font-weight: 600;">Blog</a>
+                    <a href="ho-tro.html" style="padding: var(--space-1) var(--space-2); border-radius: var(--radius-full); font-weight: 600;">Hỗ trợ</a>
+                </nav>
+
+                <div class="header-icons" style="display: flex; gap: var(--space-3); align-items: center;">
+                    <i class="fas fa-search" id="searchIcon" style="font-size: 1.2rem; cursor: pointer; color: var(--gray-600);"></i>
+                    <i class="fas fa-user" style="font-size: 1.2rem; cursor: pointer; color: var(--gray-600);"></i>
+                    <div style="position: relative;" id="cartIcon">
+                        <i class="fas fa-shopping-cart" style="font-size: 1.2rem; cursor: pointer; color: var(--gray-600);"></i>
+                        <span id="cartCount" style="position: absolute; top: -10px; right: -12px; background: var(--red); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 50%; font-weight: 600; display: none;">0</span>
+                    </div>
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Search box -->
+            <div id="searchBox" style="display: none; padding-bottom: var(--space-3);">
+                <input type="text" id="searchInput" placeholder="Tìm template PowerPoint..." style="width: 100%; padding: var(--space-2) var(--space-3); border-radius: var(--radius-full); border: 1px solid var(--gray-200); background: var(--white); color: var(--gray-900);">
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE SIDEBAR -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar" id="mobileSidebar">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-4);">
+            <div class="logo" style="font-size: 1.8rem; font-weight: 800; color: var(--red);">Slide<span style="color: var(--gray-900);">Pro</span></div>
+            <button id="sidebarClose" style="width: 44px; height: 44px; border-radius: 50%; background: var(--gray-200); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; cursor: pointer;"><i class="fas fa-times"></i></button>
+        </div>
+        <nav style="display: flex; flex-direction: column; gap: var(--space-3); flex: 1;">
+            <a href="tat-ca-san-pham.html" style="font-size: 1.2rem; font-weight: 600; padding: var(--space-1) 0; border-bottom: 1px solid var(--gray-200);">Sản phẩm</a>
+            <a href="#categories" style="font-size: 1.2rem; font-weight: 600; padding: var(--space-1) 0; border-bottom: 1px solid var(--gray-200);">Bộ sưu tập</a>
+            <a href="#blog" style="font-size: 1.2rem; font-weight: 600; padding: var(--space-1) 0; border-bottom: 1px solid var(--gray-200);">Blog</a>
+            <a href="ho-tro.html" style="font-size: 1.2rem; font-weight: 600; padding: var(--space-1) 0; border-bottom: 1px solid var(--gray-200);">Hỗ trợ</a>
+        </nav>
+        <div style="margin-top: auto; padding-top: var(--space-4); border-top: 1px solid var(--gray-200); display: flex; gap: var(--space-3); justify-content: center; font-size: 1.4rem;">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-user"></i>
+            <div style="position: relative;">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="mobileCartCount" style="position: absolute; top: -10px; right: -12px; background: var(--red); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 50%; display: none;">0</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- HERO -->
+        <section class="hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); padding: var(--space-8) 0 var(--space-6); align-items: center;">
+            <div>
+                <h1 style="margin-bottom: var(--space-3);">
+                    Nâng tầm bài thuyết trình <span style="color: var(--red); border-bottom: 4px solid var(--red-light); display: inline-block; padding-bottom: 4px;">với template PowerPoint</span> chuyên nghiệp
+                </h1>
+                <p style="font-size: 1.2rem; color: var(--gray-600); margin-bottom: var(--space-4);">
+                    Không cần biết thiết kế, không cần cài đặt. Chỉ 5 phút chỉnh sửa, bạn có ngay bộ slide ấn tượng.
+                </p>
+                <div class="hero-buttons" style="display: flex; gap: var(--space-2); margin-bottom: var(--space-3); flex-wrap: wrap;">
+                    <a href="#product-section" class="btn btn-primary" id="khamPhaBtn">Khám phá ngay</a>
+                    <button class="btn btn-outline" id="trialBtn">🎁 Dùng thử 3 template</button>
+                </div>
+                <div style="display: flex; align-items: center; gap: var(--space-2); color: var(--gray-600);">
+                    <i class="fas fa-check-circle" style="color: var(--blue-accent);"></i>
+                    <span>Tin dùng bởi 15.000+ nhà thiết kế & marketer</span>
+                </div>
+            </div>
+            <div style="background: var(--gray-100); border-radius: var(--radius); padding: var(--space-2); box-shadow: var(--shadow-md); transition: var(--transition);">
+                <img src="images/hero-mockup.jpg" alt="SlidePro mockup" style="border-radius: var(--radius-sm); width: 100%;" onerror="this.src='https://placehold.co/600x400/f8f9fa/E63946?text=SlidePro+Mockup'">
+            </div>
+        </section>
+
+        <!-- DANH MỤC -->
+        <section id="categories" style="padding: var(--space-8) 0 var(--space-4);">
+            <h2 style="margin-bottom: var(--space-4);">Danh mục <span style="color: var(--red);">phổ biến</span></h2>
+            <div id="categoryFilter" style="display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-6);">
+                <!-- JS sẽ generate -->
+            </div>
+        </section>
+
+        <!-- SẢN PHẨM -->
+        <section id="product-section" style="padding: var(--space-4) 0;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-3); flex-wrap: wrap; gap: var(--space-2);">
+                <h2>Template <span style="color: var(--red);">bán chạy nhất</span></h2>
+                <div style="display: flex; gap: var(--space-3); background: var(--gray-100); padding: var(--space-1); border-radius: var(--radius-full);">
+                    <button class="tab-btn active" data-sort="popular" style="padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); background: var(--red); color: white; font-weight: 600; border: none;">Phổ biến</button>
+                    <button class="tab-btn" data-sort="newest" style="padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); background: transparent; color: var(--gray-600); font-weight: 600; border: none;">Mới nhất</button>
+                    <button class="tab-btn" data-sort="price" style="padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); background: transparent; color: var(--gray-600); font-weight: 600; border: none;">Giá tốt</button>
+                </div>
+            </div>
+            <div id="productGrid" class="grid-auto" style="margin-bottom: var(--space-4);"></div>
+            <div id="loadMoreContainer" style="text-align: center;">
+                <button id="loadMoreBtn" class="btn btn-outline">Xem thêm template <i class="fas fa-arrow-down"></i></button>
+            </div>
+        </section>
+
+        <!-- FLASH SALE -->
+        <section style="background: linear-gradient(145deg, var(--red), #FF6B6B); border-radius: var(--radius); padding: var(--space-6); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; color: white; margin: var(--space-8) 0; gap: var(--space-4);">
+            <div>
+                <h3 style="font-size: 2rem; margin-bottom: var(--space-1);">Combo 50 template</h3>
+                <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: var(--space-2);">Giá chỉ bằng 1 ly cà phê</p>
+                <a href="#" class="btn" style="background: white; color: var(--red); padding: var(--space-2) var(--space-5);">Mua ngay</a>
+            </div>
+            <div id="countdown" style="display: flex; gap: var(--space-3); background: rgba(0,0,0,0.15); backdrop-filter: blur(8px); padding: var(--space-3) var(--space-4); border-radius: var(--radius-full);">
+                <div style="text-align: center;">
+                    <span id="days" style="font-size: 2rem; font-weight: 800; font-family: 'JetBrains Mono';">02</span>
+                    <span style="display: block; font-size: 0.75rem; opacity: 0.8;">Ngày</span>
+                </div>
+                <div style="text-align: center;">
+                    <span id="hours" style="font-size: 2rem; font-weight: 800; font-family: 'JetBrains Mono';">10</span>
+                    <span style="display: block; font-size: 0.75rem; opacity: 0.8;">Giờ</span>
+                </div>
+                <div style="text-align: center;">
+                    <span id="minutes" style="font-size: 2rem; font-weight: 800; font-family: 'JetBrains Mono';">45</span>
+                    <span style="display: block; font-size: 0.75rem; opacity: 0.8;">Phút</span>
+                </div>
+                <div style="text-align: center;">
+                    <span id="seconds" style="font-size: 2rem; font-weight: 800; font-family: 'JetBrains Mono';">30</span>
+                    <span style="display: block; font-size: 0.75rem; opacity: 0.8;">Giây</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3 BƯỚC -->
+        <section style="padding: var(--space-8) 0; text-align: center;">
+            <h2 style="margin-bottom: var(--space-6);">Chỉ <span style="color: var(--red);">3 bước</span> để sở hữu</h2>
+            <div style="display: grid; grid-template-columns: repeat(3,1fr); gap: var(--space-6);">
+                <div>
+                    <div class="step-icon" style="background: var(--gray-100); width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-3); border: 2px dashed var(--red); color: var(--red); font-size: 2.2rem; font-weight: 700;">1</div>
+                    <h4>Chọn template</h4>
+                    <p style="color: var(--gray-600);">Hơn 2000+ mẫu đẹp, phân loại theo ngành nghề.</p>
+                </div>
+                <div>
+                    <div class="step-icon" style="background: var(--gray-100); width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-3); border: 2px dashed var(--red); color: var(--red); font-size: 2.2rem; font-weight: 700;">2</div>
+                    <h4>Thanh toán & tải về</h4>
+                    <p style="color: var(--gray-600);">Thanh toán an toàn, file gửi ngay sau 1 phút.</p>
+                </div>
+                <div>
+                    <div class="step-icon" style="background: var(--gray-100); width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-3); border: 2px dashed var(--red); color: var(--red); font-size: 2.2rem; font-weight: 700;">3</div>
+                    <h4>Chỉnh sửa trong 5 phút</h4>
+                    <p style="color: var(--gray-600);">Dễ dàng kéo thả, thay màu, thêm logo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIAL SLIDER -->
+        <section style="padding: var(--space-8) 0;">
+            <h2 style="margin-bottom: var(--space-4);">Khách hàng <span style="color: var(--red);">nói gì</span></h2>
+            <div class="swiper testimonial-swiper">
+                <div class="swiper-wrapper" id="testimonialWrapper"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev" style="color: var(--red);"></div>
+                <div class="swiper-button-next" style="color: var(--red);"></div>
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section id="blog" style="padding: var(--space-8) 0;">
+            <h2 style="margin-bottom: var(--space-4);">Bài viết <span style="color: var(--red);">mới nhất</span></h2>
+            <div class="grid-auto">
+                <a href="blog/5-meo-thiet-ke-slide.html" style="text-decoration: none; color: inherit;">
+                    <div style="background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden;">
+                        <img src="images/blog-1.jpg" alt="5 mẹo thiết kế slide" loading="lazy" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;" onerror="this.src='https://placehold.co/400x250/f8f9fa/E63946?text=Blog'">
+                        <div style="padding: var(--space-3);">
+                            <h3 style="font-size: 1.2rem; margin-bottom: var(--space-2);">5 mẹo thiết kế slide chuyên nghiệp không cần học đồ họa</h3>
+                            <div style="display: flex; gap: var(--space-2); color: var(--gray-600); font-size: 0.85rem;">
+                                <span><i class="fas fa-calendar"></i> 12/03/2025</span>
+                                <span><i class="fas fa-eye"></i> 2.5k</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog/cau-truc-pitch-deck.html" style="text-decoration: none; color: inherit;">
+                    <div style="background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden;">
+                        <img src="images/blog-2.jpg" alt="Pitch deck gọi vốn" loading="lazy" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;" onerror="this.src='https://placehold.co/400x250/f8f9fa/E63946?text=Pitch+Deck'">
+                        <div style="padding: var(--space-3);">
+                            <h3 style="font-size: 1.2rem; margin-bottom: var(--space-2);">Cấu trúc pitch deck giúp startup gọi vốn thành công</h3>
+                            <div style="display: flex; gap: var(--space-2); color: var(--gray-600); font-size: 0.85rem;">
+                                <span><i class="fas fa-calendar"></i> 05/03/2025</span>
+                                <span><i class="fas fa-eye"></i> 1.8k</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="blog/phoi-mau-thuyet-trinh.html" style="text-decoration: none; color: inherit;">
+                    <div style="background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden;">
+                        <img src="images/blog-3.jpg" alt="Phối màu thuyết trình" loading="lazy" style="width: 100%; aspect-ratio: 16/9; object-fit: cover;" onerror="this.src='https://placehold.co/400x250/f8f9fa/E63946?text=Color+Theory'">
+                        <div style="padding: var(--space-3);">
+                            <h3 style="font-size: 1.2rem; margin-bottom: var(--space-2);">Phối màu trong thuyết trình: Bí quyết gây ấn tượng</h3>
+                            <div style="display: flex; gap: var(--space-2); color: var(--gray-600); font-size: 0.85rem;">
+                                <span><i class="fas fa-calendar"></i> 27/02/2025</span>
+                                <span><i class="fas fa-eye"></i> 3.2k</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section style="padding: var(--space-8) 0;">
+            <h2 style="margin-bottom: var(--space-4);">Câu hỏi <span style="color: var(--red);">thường gặp</span></h2>
+            <div style="display: grid; grid-template-columns: repeat(2,1fr); gap: var(--space-3);">
+                <div style="background: var(--gray-100); padding: var(--space-3); border-radius: var(--radius);">
+                    <div style="display: flex; gap: var(--space-2); font-weight: 700; margin-bottom: var(--space-2);"><i class="fas fa-download" style="color: var(--red);"></i> Tải file kiểu gì?</div>
+                    <p style="color: var(--gray-600);">Sau thanh toán, bạn được chuyển hướng ngay đến trang tải file. Đồng thời, chúng tôi gửi email kèm link Google Drive (không giới hạn lượt tải) trong vòng 1 phút.</p>
+                </div>
+                <div style="background: var(--gray-100); padding: var(--space-3); border-radius: var(--radius);">
+                    <div style="display: flex; gap: var(--space-2); font-weight: 700; margin-bottom: var(--space-2);"><i class="fas fa-palette" style="color: var(--red);"></i> Chỉnh sửa được không?</div>
+                    <p style="color: var(--gray-600);">Có. 100% template tại SlidePro đều dạng PowerPoint native, bạn có thể thoải mái đổi màu, thay font, di chuyển vị trí mà không làm vỡ layout.</p>
+                </div>
+                <div style="background: var(--gray-100); padding: var(--space-3); border-radius: var(--radius);">
+                    <div style="display: flex; gap: var(--space-2); font-weight: 700; margin-bottom: var(--space-2);"><i class="fas fa-shield-alt" style="color: var(--red);"></i> Bảo hành?</div>
+                    <p style="color: var(--gray-600);">Bảo hành trọn đời. Nếu file lỗi, hãy gửi email đến support@slidepro.com – đội ngũ kỹ thuật sẽ gửi lại file mới trong 4 giờ làm việc.</p>
+                </div>
+                <div style="background: var(--gray-100); padding: var(--space-3); border-radius: var(--radius);">
+                    <div style="display: flex; gap: var(--space-2); font-weight: 700; margin-bottom: var(--space-2);"><i class="fas fa-undo-alt" style="color: var(--red);"></i> Hoàn tiền?</div>
+                    <p style="color: var(--gray-600);">Hoàn tiền 100% trong vòng 7 ngày nếu template không giống mô tả hoặc bạn không thể mở file. Không cần trả lại file.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section id="newsletter" style="background: var(--gray-100); border-radius: var(--radius); padding: var(--space-8); text-align: center; margin: var(--space-8) 0;">
+            <h2 style="font-size: 2rem; margin-bottom: var(--space-2);">Bạn đã sẵn sàng trình bày chuyên nghiệp hơn 90% đối thủ?</h2>
+            <p style="color: var(--gray-600); margin-bottom: var(--space-4);">Hơn 2.000 người đang dùng SlidePro mỗi ngày – Bạn thì sao?</p>
+            <div style="display: flex; max-width: 500px; margin: 0 auto; gap: var(--space-2); flex-wrap: wrap; justify-content: center;">
+                <input type="email" id="newsletterEmail" placeholder="Địa chỉ email của bạn" style="flex: 1; min-width: 200px; padding: var(--space-2) var(--space-3); border-radius: var(--radius-full); border: 1px solid var(--gray-200); background: var(--white);">
+                <button id="newsletterBtn" class="btn btn-primary">🎯 Nhận template đẹp ngay</button>
+            </div>
+            <p style="margin-top: var(--space-2); font-size: 0.9rem; color: var(--gray-600);">✨ Tặng ngay 3 template khi đăng ký – Không thử là phí!</p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="background: var(--white); border-top: 1px solid var(--gray-200); padding-top: var(--space-8);">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; font-weight: 800; color: var(--red); margin-bottom: var(--space-2);">Slide<span style="color: var(--gray-900);">Pro</span></div>
+                    <p style="color: var(--gray-600); margin-bottom: var(--space-2);">SlidePro cung cấp hàng ngàn template PowerPoint chất lượng cao, dễ chỉnh sửa, phù hợp cho mọi nhu cầu thuyết trình.</p>
+                    <div style="display: flex; gap: var(--space-2); font-size: 1.8rem; color: var(--gray-600);">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 style="margin-top: var(--space-3); font-size: 1.1rem;">Kết nối</h4>
+                    <div style="display: flex; gap: var(--space-2); font-size: 1.5rem; margin-top: var(--space-2);">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Giới thiệu</h4>
+                    <ul style="margin-top: var(--space-2);">
+                        <li style="margin-bottom: var(--space-1);"><a href="#" style="color: var(--gray-600);">Về chúng tôi</a></li>
+                        <li style="margin-bottom: var(--space-1);"><a href="#blog" style="color: var(--gray-600);">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Chính sách</h4>
+                    <ul style="margin-top: var(--space-2);">
+                        <li style="margin-bottom: var(--space-1);"><a href="#" style="color: var(--gray-600);">Điều khoản dịch vụ</a></li>
+                        <li style="margin-bottom: var(--space-1);"><a href="#" style="color: var(--gray-600);">Chính sách bảo mật</a></li>
+                        <li style="margin-bottom: var(--space-1);"><a href="#" style="color: var(--gray-600);">Chính sách hoàn tiền</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Hỗ trợ</h4>
+                    <ul style="margin-top: var(--space-2);">
+                        <li style="margin-bottom: var(--space-1);"><a href="#" style="color: var(--gray-600);">Trung tâm trợ giúp</a></li>
+                        <li style="margin-bottom: var(--space-1);"><a href="#" style="color: var(--gray-600);">Hướng dẫn tải file</a></li>
+                        <li style="margin-bottom: var(--space-1);"><a href="#" style="color: var(--gray-600);">Dịch vụ thiết kế</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; padding: var(--space-4) 0; color: var(--gray-600); border-top: 1px solid var(--gray-200);">
+                © 2025 SlidePro. Thiết kế và phát triển bởi đội ngũ SlidePro.
+            </div>
+        </div>
+    </footer>
+
+    <!-- QUICK VIEW MODAL -->
+    <div id="quickViewModal" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-close" id="closeQuickView"><i class="fas fa-times"></i></div>
+            <div class="swiper quickview-gallery">
+                <div class="swiper-wrapper" id="quickViewGallery"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev" style="color: var(--red);"></div>
+                <div class="swiper-button-next" style="color: var(--red);"></div>
+            </div>
+            <h3 id="quickViewTitle" style="margin: var(--space-3) 0 var(--space-1); font-size: 1.8rem;"></h3>
+            <p id="quickViewDesc" style="color: var(--gray-600); margin-bottom: var(--space-3);"></p>
+            <div class="quickview-details">
+                <div>
+                    <div id="quickViewMeta" class="quickview-meta"></div>
+                </div>
+                <div>
+                    <div style="display: flex; gap: var(--space-2); align-items: baseline; margin-bottom: var(--space-3);">
+                        <span id="quickViewPrice" style="font-size: 2rem; font-weight: 700; color: var(--red); font-family: 'JetBrains Mono';">299.000đ</span>
+                        <span id="quickViewOldPrice" style="color: var(--gray-600); text-decoration: line-through;">499.000đ</span>
+                    </div>
+                    <button id="addToCartQuick" class="btn btn-primary" style="width: 100%;">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- MAIN APP -->
+    <script>
+        (function() {
+            "use strict";
+
+            const IMAGE_PATH = 'images/';
+
+            // ---------- DỮ LIỆU SẢN PHẨM ----------
+            const products = [
+                { id:1, slug:'ceo-vision', title:'CEO Vision – Báo cáo chiến lược', category:'Kinh doanh', price:299000, oldPrice:499000, rating:5, reviews:128, desc:'Bộ slide dành cho báo cáo chiến lược cấp cao, thiết kế tối giản nhưng sang trọng.', includes:'File PPTX (35 slide), Font Google, Ảnh miễn phí bản quyền', format:'PowerPoint 16:9', size:'18MB', pages:'35 trang', images:['ceo-vision-1.jpg','ceo-vision-2.jpg','ceo-vision-3.jpg'], badge:'Bán chạy', sale:-20, isNew:false, createdAt:'2025-02-10' },
+                { id:2, slug:'marketing-boost', title:'Marketing Boost – Campaign Pitch', category:'Marketing', price:399000, oldPrice:599000, rating:4.5, reviews:76, desc:'Template pitch cho chiến dịch marketing, nổi bật với hiệu ứng động và bố cục hiện đại.', includes:'File PPTX (28 slide), Font system, Icons vector', format:'PowerPoint 16:9', size:'22MB', pages:'28 trang', images:['marketing-boost-1.jpg','marketing-boost-2.jpg','marketing-boost-3.jpg'], badge:'', sale:-33, isNew:true, createdAt:'2025-03-01' },
+                { id:3, slug:'edu-smart', title:'Edu Smart – Bài giảng đại học', category:'Giáo dục', price:199000, oldPrice:249000, rating:5, reviews:214, desc:'Mẫu slide giáo dục với tông màu pastel, dễ đọc, phù hợp cho giảng viên và sinh viên.', includes:'File PPTX (42 slide), Font Google, Biểu đồ động', format:'PowerPoint 16:9', size:'15MB', pages:'42 trang', images:['edu-smart-1.jpg','edu-smart-2.jpg'], badge:'Bán chạy', sale:-20, isNew:false, createdAt:'2025-01-15' },
+                { id:4, slug:'financial-report', title:'Financial Report – Báo cáo Q1', category:'Báo cáo tài chính', price:329000, oldPrice:429000, rating:4.5, reviews:47, desc:'Thiết kế chuyên nghiệp cho báo cáo tài chính, nhiều biểu đồ và bảng số liệu dễ chỉnh sửa.', includes:'File PPTX (30 slide), Font system, Icon tài chính', format:'PowerPoint 16:9', size:'20MB', pages:'30 trang', images:['financial-report-1.jpg','financial-report-2.jpg'], badge:'', sale:-23, isNew:false, createdAt:'2025-02-20' },
+                { id:5, slug:'pitch-deck', title:'Pitch Deck – Gọi vốn thông minh', category:'Startup pitch deck', price:349000, oldPrice:450000, rating:5, reviews:155, desc:'Bộ 10 slide pitch deck tối giản nhưng đủ sức thuyết phục nhà đầu tư.', includes:'File PPTX (12 slide), Font Google, Mockup điện thoại', format:'PowerPoint 16:9', size:'12MB', pages:'12 trang', images:['pitch-deck-1.jpg','pitch-deck-2.jpg'], badge:'Bán chạy', sale:-22, isNew:false, createdAt:'2025-02-28' },
+                { id:6, slug:'portfolio-creative', title:'Portfolio sáng tạo – Ấn tượng ngay', category:'Cá nhân', price:279000, oldPrice:350000, rating:5, reviews:92, desc:'Thiết kế portfolio cá nhân với phong cách grid, tập trung vào hình ảnh.', includes:'File PPTX (20 slide), Font system, Ảnh placeholder', format:'PowerPoint 16:9', size:'25MB', pages:'20 trang', images:['portfolio-1.jpg','portfolio-2.jpg'], badge:'', sale:-20, isNew:true, createdAt:'2025-03-10' },
+                { id:7, slug:'corporate-pro', title:'Corporate Pro – Báo cáo thường niên', category:'Kinh doanh', price:499000, oldPrice:699000, rating:5, reviews:47, desc:'Mẫu báo cáo thường niên sang trọng, nhiều infographic.', includes:'File PPTX (38 slide), Font Google, Icon độc quyền', format:'PowerPoint 16:9', size:'30MB', pages:'38 trang', images:['corporate-pro-1.jpg','corporate-pro-2.jpg'], badge:'Premium', sale:-29, isNew:false, createdAt:'2025-01-05' },
+                { id:8, slug:'social-media-kit', title:'Social Media Kit – Bộ 10 slide', category:'Marketing', price:249000, oldPrice:349000, rating:4.5, reviews:33, desc:'Bộ slide dành cho kế hoạch truyền thông mạng xã hội, có sẵn mockup.', includes:'File PPTX (15 slide), Font Google, Mockup điện thoại', format:'PowerPoint 16:9', size:'18MB', pages:'15 trang', images:['social-media-1.jpg','social-media-2.jpg'], badge:'New', sale:-29, isNew:true, createdAt:'2025-03-12' },
+                { id:9, slug:'kids-learning', title:'Kids Learning – Mầm non sáng tạo', category:'Giáo dục', price:179000, oldPrice:259000, rating:5, reviews:67, desc:'Slide dành cho giáo dục mầm non, màu sắc tươi sáng, nhiều hình ảnh ngộ nghĩnh.', includes:'File PPTX (25 slide), Font Google, Ảnh động vật', format:'PowerPoint 16:9', size:'28MB', pages:'25 trang', images:['kids-learning-1.jpg','kids-learning-2.jpg'], badge:'', sale:-31, isNew:false, createdAt:'2025-02-14' }
+            ];
+
+            const testimonials = [
+                { name:'Nguyễn Thị Lan', job:'Marketing Manager', text:'"Tiết kiệm hàng giờ thiết kế, slide đẹp miễn chê. Từ khi dùng SlidePro, tôi không còn phải thức khuya làm slide nữa!"', rating:5 },
+                { name:'Trần Văn Hoàng', job:'Giảng viên đại học', text:'"Tôi mua gói combo 50 template, chất lượng cực tốt, sinh viên rất thích. Ủng hộ đội ngũ!"', rating:5 },
+                { name:'Lê Minh Tú', job:'Founder', text:'"Pitch deck của startup mình gây ấn tượng mạnh với nhà đầu tư nhờ template ở đây. Giá rất hợp lý."', rating:5 },
+                { name:'Phạm Hồng Nhung', job:'Chuyên viên tài chính', text:'"Báo cáo tài chính trực quan, biểu đồ đẹp. Sếp khen liên tục!"', rating:5 }
+            ];
+
+            // ---------- STATE ----------
+            let cart = JSON.parse(localStorage.getItem('slidepro_cart')) || [];
+            let currentCategory = 'all';
+            let currentSearchTerm = '';
+            let sortType = 'popular';
+            let visibleProducts = 6;
+            let currentProductId = null;
+
+            // ---------- UTILS ----------
+            const formatPrice = (p) => p.toLocaleString() + 'đ';
+
+            // ---------- TOAST ----------
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            const toastUndo = document.getElementById('toast-undo');
+            function showToast(msg, undoCallback) {
+                toastMsg.textContent = msg;
+                toast.classList.add('show');
+                if (undoCallback) {
+                    toastUndo.style.display = 'inline-block';
+                    toastUndo.onclick = () => { undoCallback(); toast.classList.remove('show'); };
+                } else toastUndo.style.display = 'none';
+                setTimeout(() => toast.classList.remove('show'), 4000);
+            }
+
+            // ---------- CART ----------
+            function updateCartCount() {
+                const count = cart.reduce((a,i)=>a+i.quantity,0);
+                const badge = document.getElementById('cartCount');
+                const mobileBadge = document.getElementById('mobileCartCount');
+                if (badge) {
+                    badge.textContent = count;
+                    badge.style.display = count ? 'inline-block' : 'none';
+                }
+                if (mobileBadge) {
+                    mobileBadge.textContent = count;
+                    mobileBadge.style.display = count ? 'inline-block' : 'none';
+                }
+                localStorage.setItem('slidepro_cart', JSON.stringify(cart));
+            }
+            function addToCart(id) {
+                const item = cart.find(i=>i.id===id);
+                if (item) item.quantity++;
+                else cart.push({id, quantity:1});
+                updateCartCount();
+                showToast('Đã thêm vào giỏ hàng', ()=>{
+                    const idx = cart.findIndex(i=>i.id===id);
+                    if (idx!==-1) {
+                        if (cart[idx].quantity>1) cart[idx].quantity--;
+                        else cart.splice(idx,1);
+                        updateCartCount();
+                    }
+                });
+            }
+            updateCartCount();
+
+            // ---------- CATEGORY FILTER RENDER ----------
+            const categories = ['all','Kinh doanh','Marketing','Giáo dục','Báo cáo tài chính','Startup pitch deck','Cá nhân'];
+            const catContainer = document.getElementById('categoryFilter');
+            function renderCategories() {
+                catContainer.innerHTML = categories.map(cat => {
+                    const active = (cat===currentCategory);
+                    return `<button class="category-btn" data-category="${cat}" style="padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); background: ${active?'var(--red)':'var(--gray-100)'}; color: ${active?'white':'var(--gray-600)'}; font-weight: 600; border: 1px solid transparent; white-space: nowrap;">${cat==='all'?'Tất cả':cat}</button>`;
+                }).join('');
+            }
+
+            // ---------- PRODUCT RENDER ----------
+            function renderProducts() {
+                let filtered = products.filter(p => {
+                    if (currentCategory!=='all' && p.category!==currentCategory) return false;
+                    if (currentSearchTerm && !p.title.toLowerCase().includes(currentSearchTerm.toLowerCase())) return false;
+                    return true;
+                });
+                if (sortType==='popular') filtered.sort((a,b)=>b.reviews-a.reviews);
+                else if (sortType==='newest') filtered.sort((a,b)=>new Date(b.createdAt)-new Date(a.createdAt));
+                else if (sortType==='price') filtered.sort((a,b)=>a.price-b.price);
+                
+                const visible = filtered.slice(0, visibleProducts);
+                const grid = document.getElementById('productGrid');
+                grid.innerHTML = visible.map(p => `
+                    <div class="product-card" data-id="${p.id}">
+                        <div class="product-thumb">
+                            <img src="${IMAGE_PATH}${p.images[0]}" alt="${p.title}" loading="lazy" onerror="this.src='https://placehold.co/400x250/f8f9fa/E63946?text=${encodeURIComponent(p.title)}'">
+                            <div class="product-badges">
+                                ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
+                                ${p.sale ? `<span class="badge badge-sale">${Math.abs(p.sale)}%</span>` : ''}
+                                ${p.isNew ? `<span class="badge">New</span>` : ''}
+                            </div>
+                            <button class="quick-view-btn" data-id="${p.id}">Xem nhanh</button>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">${p.category}</div>
+                            <h3 class="product-title">${p.title}</h3>
+                            <div class="product-price">
+                                <span class="current-price">${formatPrice(p.price)}</span>
+                                ${p.oldPrice ? `<span class="old-price">${formatPrice(p.oldPrice)}</span>` : ''}
+                            </div>
+                            <div class="rating">
+                                ${'<i class="fas fa-star"></i>'.repeat(Math.floor(p.rating))}
+                                ${p.rating%1!==0?'<i class="fas fa-star-half-alt"></i>':''}
+                                <span>(${p.reviews})</span>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+                document.getElementById('loadMoreContainer').style.display = visible.length >= filtered.length || filtered.length<=6 ? 'none' : 'block';
+            }
+
+            // ---------- TESTIMONIAL RENDER ----------
+            function renderTestimonials() {
+                const wrapper = document.getElementById('testimonialWrapper');
+                if (wrapper) {
+                    wrapper.innerHTML = testimonials.map(t => `
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div style="display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-2);">
+                                    <div style="width: 60px; height: 60px; border-radius: 50%; background: var(--gray-200); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--gray-600);"><i class="fas fa-user-circle"></i></div>
+                                    <div>
+                                        <div style="font-weight: 700;">${t.name}</div>
+                                        <div style="color: var(--red); font-size: 0.85rem;">${t.job}</div>
+                                    </div>
+                                </div>
+                                <p style="color: var(--gray-600); margin-bottom: var(--space-2); font-style: italic;">${t.text}</p>
+                                <div style="color: #FFB800;">${'<i class="fas fa-star"></i>'.repeat(t.rating)}</div>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+            }
+
+            // ---------- COUNTDOWN ----------
+            function initCountdown() {
+                let end = new Date(); end.setMonth(end.getMonth()+1,0); end.setHours(23,59,59);
+                function update() {
+                    const diff = end - new Date();
+                    if (diff<=0) { end = new Date(); end.setMonth(end.getMonth()+2,0); end.setHours(23,59,59); }
+                    document.getElementById('days').textContent = Math.floor(diff/(1000*60*60*24)).toString().padStart(2,'0');
+                    document.getElementById('hours').textContent = Math.floor((diff%(1000*60*60*24))/(1000*60*60)).toString().padStart(2,'0');
+                    document.getElementById('minutes').textContent = Math.floor((diff%(1000*60*60))/(1000*60)).toString().padStart(2,'0');
+                    document.getElementById('seconds').textContent = Math.floor((diff%(1000*60))/1000).toString().padStart(2,'0');
+                }
+                update(); setInterval(update,1000);
+            }
+
+            // ---------- 3D TILT (mobile: disabled) ----------
+            function initTilt() {
+                if (window.innerWidth <= 768) return;
+                document.addEventListener('mouseover', e => {
+                    const card = e.target.closest('.product-card');
+                    if (!card) return;
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left, y = e.clientY - rect.top;
+                    const cx = rect.width/2, cy = rect.height/2;
+                    card.style.transform = `perspective(1000px) rotateX(${(y-cy)/20}deg) rotateY(${(cx-x)/20}deg) scale3d(1.02,1.02,1.02)`;
+                });
+                document.addEventListener('mouseout', e => {
+                    const card = e.target.closest('.product-card');
+                    if (card) card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1,1,1)';
+                });
+            }
+
+            // ---------- URL SYNC ----------
+            function updateURL() {
+                const url = new URL(window.location);
+                if (currentCategory!=='all') url.searchParams.set('category',currentCategory); else url.searchParams.delete('category');
+                if (currentSearchTerm) url.searchParams.set('search',currentSearchTerm); else url.searchParams.delete('search');
+                if (sortType!=='popular') url.searchParams.set('sort',sortType); else url.searchParams.delete('sort');
+                window.history.replaceState({},'',url);
+            }
+            function loadFromURL() {
+                const params = new URLSearchParams(location.search);
+                if (params.has('category')) currentCategory = params.get('category');
+                if (params.has('search')) currentSearchTerm = params.get('search');
+                if (params.has('sort')) sortType = params.get('sort');
+                renderCategories(); renderProducts();
+            }
+
+            // ---------- QUICK VIEW ----------
+            const modal = document.getElementById('quickViewModal');
+            const closeModal = document.getElementById('closeQuickView');
+            const gallery = document.getElementById('quickViewGallery');
+            const qvTitle = document.getElementById('quickViewTitle');
+            const qvDesc = document.getElementById('quickViewDesc');
+            const qvMeta = document.getElementById('quickViewMeta');
+            const qvPrice = document.getElementById('quickViewPrice');
+            const qvOldPrice = document.getElementById('quickViewOldPrice');
+            const addQuick = document.getElementById('addToCartQuick');
+
+            function openQuickView(id) {
+                const p = products.find(p=>p.id===id); if(!p) return;
+                currentProductId = p.id;
+                gallery.innerHTML = p.images.map(img=>`
+                    <div class="swiper-slide"><img src="${IMAGE_PATH}${img}" alt="${p.title}" onerror="this.src='https://placehold.co/600x400/f8f9fa/E63946?text=${encodeURIComponent(p.title)}'"></div>
+                `).join('');
+                qvTitle.textContent = p.title;
+                qvDesc.textContent = p.desc;
+                qvPrice.textContent = formatPrice(p.price);
+                if (p.oldPrice) { qvOldPrice.textContent = formatPrice(p.oldPrice); qvOldPrice.style.display = 'inline'; } else qvOldPrice.style.display = 'none';
+                qvMeta.innerHTML = `
+                    <div style="margin-bottom: var(--space-2);"><i class="fas fa-file-powerpoint" style="color: var(--red); width: 24px;"></i> <strong>File:</strong> ${p.includes}</div>
+                    <div style="margin-bottom: var(--space-2);"><i class="fas fa-file-alt" style="color: var(--red); width: 24px;"></i> <strong>Số trang:</strong> ${p.pages}</div>
+                    <div style="margin-bottom: var(--space-2);"><i class="fas fa-expand" style="color: var(--red); width: 24px;"></i> <strong>Định dạng:</strong> ${p.format}</div>
+                    <div><i class="fas fa-database" style="color: var(--red); width: 24px;"></i> <strong>Dung lượng:</strong> ${p.size}</div>
+                `;
+                modal.classList.add('active'); document.body.style.overflow = 'hidden';
+                setTimeout(()=>{ new Swiper('.quickview-gallery', { slidesPerView:1, spaceBetween:10, loop:true, pagination:{el:'.swiper-pagination',clickable:true}, navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'} }); },100);
+            }
+
+            // ---------- EVENT LISTENERS ----------
+            document.addEventListener('click', e => {
+                const catBtn = e.target.closest('.category-btn');
+                if (catBtn) { currentCategory = catBtn.dataset.category; renderCategories(); renderProducts(); updateURL(); }
+                const quickBtn = e.target.closest('.quick-view-btn');
+                if (quickBtn) openQuickView(parseInt(quickBtn.dataset.id));
+            });
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.tab-btn').forEach(b => { b.style.background = 'transparent'; b.style.color = 'var(--gray-600)'; });
+                    this.style.background = 'var(--red)'; this.style.color = 'white';
+                    sortType = this.dataset.sort; renderProducts(); updateURL();
+                });
+            });
+
+            document.getElementById('searchIcon').addEventListener('click', ()=>{
+                const sb = document.getElementById('searchBox');
+                sb.style.display = sb.style.display==='none' ? 'block' : 'none';
+            });
+            document.getElementById('searchInput').addEventListener('input', function(e) {
+                currentSearchTerm = e.target.value; renderProducts(); updateURL();
+            });
+            document.getElementById('loadMoreBtn').addEventListener('click', ()=>{ visibleProducts+=6; renderProducts(); });
+
+            // Mobile sidebar
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            const sidebar = document.getElementById('mobileSidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const sidebarClose = document.getElementById('sidebarClose');
+            mobileBtn.addEventListener('click', ()=>{ sidebar.classList.add('active'); overlay.classList.add('active'); });
+            sidebarClose.addEventListener('click', ()=>{ sidebar.classList.remove('active'); overlay.classList.remove('active'); });
+            overlay.addEventListener('click', ()=>{ sidebar.classList.remove('active'); overlay.classList.remove('active'); });
+
+            // Modal
+            closeModal.addEventListener('click', ()=>{ modal.classList.remove('active'); document.body.style.overflow = ''; });
+            modal.addEventListener('click', e=>{ if(e.target===modal) { modal.classList.remove('active'); document.body.style.overflow = ''; } });
+            addQuick.addEventListener('click', ()=>{ if(currentProductId) addToCart(currentProductId); modal.classList.remove('active'); document.body.style.overflow = ''; });
+
+            // Newsletter
+            document.getElementById('newsletterBtn').addEventListener('click', ()=>{
+                const email = document.getElementById('newsletterEmail').value;
+                if (!email.includes('@')) showToast('❌ Email không hợp lệ', null);
+                else showToast('🎉 3 template đã gửi đến email của bạn!', null);
+            });
+
+            // Scroll
+            document.getElementById('khamPhaBtn').addEventListener('click', e=>{ e.preventDefault(); document.getElementById('product-section').scrollIntoView({behavior:'smooth'}); });
+            document.getElementById('trialBtn').addEventListener('click', ()=> showToast('🎁 Link tải 3 template đã gửi đến email demo@slidepro.vn (mô phỏng)', null));
+            document.querySelectorAll('a[href^="#"]').forEach(a=> a.addEventListener('click', function(e){ e.preventDefault(); const t = document.querySelector(this.getAttribute('href')); if(t) t.scrollIntoView({behavior:'smooth'}); }));
+
+            // Khởi tạo
+            renderCategories(); renderProducts(); renderTestimonials(); initCountdown(); initTilt(); loadFromURL();
+            new Swiper('.testimonial-swiper', { slidesPerView:1, spaceBetween:24, loop:true, autoplay:{delay:5000}, pagination:{el:'.swiper-pagination',clickable:true}, navigation:{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev'}, breakpoints:{640:{slidesPerView:2},1024:{slidesPerView:3}} });
+        })();
+    </script>
+</body>
+</html>
